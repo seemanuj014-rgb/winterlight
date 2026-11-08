@@ -21,6 +21,7 @@ import { createStayPet, type StayPet } from './stayPet';
 import { createSkyText, type SkyText } from '../ui/skyText';
 import { replayControls } from '../ui/replayControls';
 import { createBus, type Bus, type WinterEvents } from '../state/events';
+import { createJoystick } from '../ui/joystick';
 
 // Phase 28 test view: `?stay` = the PICTURE of stay a while: the valley exactly as the finale ended (the cabin glowing small, the aurora at its fullest), swaying a very little, turned by
 // a drag or the arrow keys (Home recentres), and the five finished shapes coming home from the crown to their patches in the sky (look up to see them). It starts staying at once.
@@ -182,6 +183,8 @@ export function createStayView(ctx: { stage: Stage; scene: THREE.Scene; camera: 
   };
   const onPetMove = (e: PointerEvent): void => pet.move(e.clientX, e.clientY);
   const onPetUp = (e: PointerEvent): void => pet.release(e.clientX, e.clientY);
+  // the walking stick (bottom-left): shown only while she is staying; `?nostick` hides it
+  const stick = params.has('nostick') || typeof document === 'undefined' ? null : createJoystick(document.body, () => world.turnAround());
   const input = createStayInput({ stay, world, stage: canvas, keys: window, width: () => wNow, claim: (x, y, k) => pet.claim(x, y, k) });
   // the keyboard's way to pet her: the B key, tapped or held (not when a control, field or dialog has the focus, nor with a modifier)
   const onPetKeyDown = (e: KeyboardEvent): void => {
@@ -231,6 +234,11 @@ export function createStayView(ctx: { stage: Stage; scene: THREE.Scene; camera: 
   }
   function step(dt: number): void {
     world.update(dt);
+    if (stick) {
+      stick.show(stay.machine.staying);
+      const s = stick.value();
+      world.move(s.x, s.y, dt);
+    }
     placeCamera();
     sky.setHome(world.state().home);
     applyPlan();
@@ -344,6 +352,7 @@ export function createStayView(ctx: { stage: Stage; scene: THREE.Scene; camera: 
       flow.dispose();
       letter.dispose();
       finale.dispose();
+      stick?.dispose();
       world.dispose();
       stay.dispose();
       text.dispose();

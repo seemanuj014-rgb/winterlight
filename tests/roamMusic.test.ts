@@ -15,8 +15,8 @@ describe('free roaming', () => {
   it('stays inside the disc and ignores bad numbers', () => {
     const far = clampWalk({ x: 1000, z: 0 });
     expect(Math.hypot(far.x, far.z)).toBeCloseTo(STAY_WORLD.walkRadiusM, 6);
-    expect(clampWalk({ x: NaN, z: 5 })).toEqual({ x: 0, z: 5 });
-    expect(walkBy({ x: 0, z: 0 }, CENTRED, NaN, NaN)).toEqual({ x: 0, z: 0 });
+    expect(clampWalk({ x: NaN, z: 5 })).toMatchObject({ x: 0, z: 5 });
+    expect(walkBy({ x: 0, z: 0 }, CENTRED, NaN, NaN)).toMatchObject({ x: 0, z: 0 });
   });
   it('walking forward moves the eye toward where she looks, and walking back undoes it', () => {
     const a = wanderCamera(1, 0, CENTRED, true);

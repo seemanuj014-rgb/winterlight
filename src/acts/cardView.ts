@@ -168,6 +168,8 @@ export function createCardView(ctx: CardCtx): CardView {
         view = v;
         bus = v.bus;
         // the shape's own bookkeeping runs right AFTER this event, so count one tick later (counting now always sees one fewer, and the fifth shape never handed over)
+        // she has finished all five before (a reload, or coming back to the link): hand over at once, or the card waits forever for a shape that is already done
+        if (v.doneCount() >= 5) queueMicrotask(() => feed({ type: 'sky:count', done: v.doneCount() }));
         offBus.push(v.bus.on('constellation:done', () => queueMicrotask(() => feed({ type: 'sky:count', done: v.doneCount() }))));
         break;
       }

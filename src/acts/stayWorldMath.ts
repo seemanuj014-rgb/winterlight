@@ -8,7 +8,7 @@
 import { valleyCamera, finalePlacement, type FinaleCam } from './finaleSkyMath';
 import type { SkyPlacement } from '../constellations/skyLayoutMath';
 import type { V3 } from '../core/directorMath';
-import { terrainHeight } from '../world/groundMath';
+import { CABIN_SITE, terrainHeight } from '../world/groundMath';
 
 const D2R = Math.PI / 180;
 const clamp = (x: number, lo: number, hi: number): number => (Number.isFinite(x) ? Math.min(hi, Math.max(lo, x)) : lo);
@@ -21,12 +21,15 @@ export const STAY_WORLD = {
   yawRangeDeg: [-55, 40] as readonly [number, number],
   pitchLimitDeg: [-8, 68] as readonly [number, number],
   /** `[A]` a drag across the whole screen turns the view this far; one arrow-key press turns it `keyStepDeg` */
-  dragDegPerScreen: 70,
+  dragDegPerScreen: 150,
   keyStepDeg: 6,
   /** `[A]` looking up at least this far (degrees from the valley look) counts as being at the constellations */
   skyLookPitchDeg: 22,
   /** `[A]` free roaming: how far she can walk from where the finale left her (m, a disc; the ground follows the camera and ends at 35), and what one wheel pixel, one pinch pixel and one key press are worth (m) */
-  walkRadiusM: 30,
+  walkRadiusM: 33,
+  /** `[A]` the joystick: walking speed at full push (m/s), and the cabin's wall she cannot walk through (m from its centre) */
+  walkSpeedMps: 4,
+  cabinKeepOutM: 3.6,
   wheelMPerPx: 0.02,
   pinchMPerPx: 0.06,
   keyWalkM: 1.2,
@@ -45,35 +48,55 @@ export interface Pan {
 
 export const CENTRED: Pan = { yawDeg: 0, pitchDeg: 0 };
 
-/** where she has walked to, in metres east-west (x) and north-south (z) from the valley look's own spot */
+/** where she has walked to: metres east-west (x) and north-south (z) from the valley look's own spot, and how far she has turned her whole body (degrees, unlimited; her head's own turn is `Pan`) */
 export interface Walk {
   x: number;
   z: number;
+  yawDeg?: number;
 }
-export const HOME_WALK: Walk = { x: 0, z: 0 };
+export const HOME_WALK: Walk = { x: 0, z: 0, yawDeg: 0 };
 
-/** keep her inside the disc she may roam; bad numbers put her back at the start */
+const wrapDeg = (d: number): number => {
+  if (!Number.isFinite(d)) return 0;
+  const r = ((((d + 180) % 360) + 360) % 360) - 180;
+  return r === -180 ? 180 : r;
+};
+
+/** keep her inside the disc she may roam and outside the cabin's walls; bad numbers put her back at the start */
 export function clampWalk(w: Walk): Walk {
-  const x = Number.isFinite(w.x) ? w.x : 0;
-  const z = Number.isFinite(w.z) ? w.z : 0;
+  let x = Number.isFinite(w.x) ? w.x : 0;
+  let z = Number.isFinite(w.z) ? w.z : 0;
   const d = Math.hypot(x, z);
   const r = STAY_WORLD.walkRadiusM;
-  return d <= r ? { x, z } : { x: (x / d) * r, z: (z / d) * r };
+  if (d > r) {
+    x = (x / d) * r;
+    z = (z / d) * r;
+  }
+  const b = valleyCamera(1).eye;
+  const cx = CABIN_SITE.x - b[0];
+  const cz = CABIN_SITE.z - b[2];
+  const dc = Math.hypot(x - cx, z - cz);
+  if (dc < STAY_WORLD.cabinKeepOutM) {
+    const k = dc > 1e-6 ? STAY_WORLD.cabinKeepOutM / dc : 0;
+    x = dc > 1e-6 ? cx + (x - cx) * k : cx + STAY_WORLD.cabinKeepOutM;
+    z = dc > 1e-6 ? cz + (z - cz) * k : cz;
+  }
+  return { x, z, yawDeg: wrapDeg(w.yawDeg ?? 0) };
 }
 
-/** the way she is facing on the ground, radians (same convention as the camera: 0 = -z) */
-export function headingRad(pan: Pan): number {
+/** the way she is facing on the ground, radians (same convention as the camera: 0 = -z): the valley look, plus her whole-body turn, plus her head's turn */
+export function headingRad(pan: Pan, bodyYawDeg = 0): number {
   const base = valleyCamera(1);
   const d: V3 = [base.look[0] - base.eye[0], base.look[1] - base.eye[1], base.look[2] - base.eye[2]];
-  return Math.atan2(d[0], -d[2]) + clampPan(pan).yawDeg * D2R;
+  return Math.atan2(d[0], -d[2]) + (clampPan(pan).yawDeg + (Number.isFinite(bodyYawDeg) ? bodyYawDeg : 0)) * D2R;
 }
 
 /** walk `forwardM` the way she faces and `sideM` to her right (negative = back / left), clamped to the disc */
 export function walkBy(walk: Walk, pan: Pan, forwardM: number, sideM: number): Walk {
-  const h = headingRad(pan);
+  const h = headingRad(pan, walk.yawDeg ?? 0);
   const f = Number.isFinite(forwardM) ? forwardM : 0;
   const s = Number.isFinite(sideM) ? sideM : 0;
-  return clampWalk({ x: walk.x + Math.sin(h) * f + Math.cos(h) * s, z: walk.z - Math.cos(h) * f + Math.sin(h) * s });
+  return clampWalk({ x: walk.x + Math.sin(h) * f + Math.cos(h) * s, z: walk.z - Math.cos(h) * f + Math.sin(h) * s, yawDeg: walk.yawDeg ?? 0 });
 }
 
 export function clampPan(p: Pan): Pan {
@@ -131,7 +154,7 @@ export function wanderCamera(aspect: number, t: number, pan: Pan, reduced: boole
   ];
   const d: V3 = [base.look[0] - base.eye[0], base.look[1] - base.eye[1], base.look[2] - base.eye[2]];
   const l = Math.hypot(d[0], d[1], d[2]) || 1;
-  const h = Math.atan2(d[0], -d[2]) + p.yawDeg * D2R;
+  const h = Math.atan2(d[0], -d[2]) + (p.yawDeg + (wk.yawDeg ?? 0)) * D2R;
   const e = Math.asin(d[1] / l) + p.pitchDeg * D2R;
   const dir: V3 = [Math.sin(h) * Math.cos(e), Math.sin(e), -Math.cos(h) * Math.cos(e)];
   return { eye, look: [eye[0] + dir[0] * 20, eye[1] + dir[1] * 20, eye[2] + dir[2] * 20], fovDeg: base.fovDeg };

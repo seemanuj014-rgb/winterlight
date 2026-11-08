@@ -147,7 +147,7 @@ const TALL: SlotMap = {
   bumblebee: { u: -0.4, v: -0.07, s: 0.2 },
   rose: { u: 0.5, v: 0.2, s: 0.215 },
   'kaaju-katli': { u: -0.52, v: 0.44, s: 0.19 },
-  'cutie-patootie': { u: 0.42, v: 0.7, s: 0.175 },
+  'cutie-patootie': { u: -0.02, v: 0.66, s: 0.175 }, // was u 0.42: the wishes star button (top right) sat on top of it
 };
 const SQUARE: SlotMap = {
   strawberry: { u: 0.5, v: -0.22, s: 0.2 },
