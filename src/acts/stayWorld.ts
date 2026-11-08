@@ -2,7 +2,7 @@ import type { Bus, WinterEvents } from '../state/events';
 import type { SkyPlacement } from '../constellations/skyLayoutMath';
 import type { FinaleCam } from './finaleSkyMath';
 import type { StayAwhileAct } from './stayAwhile';
-import { CENTRED, HOME_WALK, clampWalk, STAY_WORLD, activityForPan, homePlacement, homeProgress, panFromDrag, panFromKey, walkBy, wanderCamera, type Pan, type Walk } from './stayWorldMath';
+import { CENTRED, HOME_WALK, clampWalk, STAY_WORLD, activityForPan, homePlacement, groundLevel, homeProgress, panFromDrag, panFromKey, walkBy, wanderCamera, type Pan, type Walk } from './stayWorldMath';
 
 // Phase 28: stay a while's world, joined to the card. No three, no DOM, no draw calls, no words: it holds the pan and the clock and hands a view the numbers
 // (`camera(aspect)`, `placement(aspect, id)`). The view (next session, in the full card) calls `update(dt)` each frame and feeds drags and keys in.
@@ -96,7 +96,7 @@ export function createStayWorld(o: StayWorldOptions): StayWorld {
       if (!o.stay.machine.staying) return;
       walkPos = walkBy(walkPos, pan, px * perPx, 0);
     },
-    camera: (aspect) => wanderCamera(aspect, t, pan, reduced, walkPos),
+    camera: (aspect) => wanderCamera(aspect, t, pan, reduced, walkPos, groundLevel(t, reduced)),
     placement: (aspect, id) => homePlacement(aspect, id, home()),
     state: () => ({ time: t, pan: { ...pan }, walk: { ...walkPos }, home: home(), staying: o.stay.machine.staying }),
     dispose: () => offs.forEach((f) => f()),

@@ -27,6 +27,9 @@ export const STAY_WORLD = {
   skyLookPitchDeg: 22,
   /** `[A]` free roaming: how far she can walk from where the finale left her (m, a disc; the ground follows the camera and ends at 35), and what one wheel pixel, one pinch pixel and one key press are worth (m) */
   walkRadiusM: 33,
+  /** `[A]` standing on the ground: the eye height above the snow (m), and how long she takes to come down from the finale's high view (s) */
+  eyeHeightM: 1.7,
+  descendS: 3.5,
   /** `[A]` the joystick: walking speed at full push (m/s), and the cabin's wall she cannot walk through (m from its centre) */
   walkSpeedMps: 4,
   cabinKeepOutM: 3.6,
@@ -138,7 +141,14 @@ export function activityForPan(pan: Pan): 'wander' | 'constellations' {
 }
 
 /** the camera `t` seconds into stay a while: the valley look, swayed a little (not under reduced motion), turned by `pan` (clamped) */
-export function wanderCamera(aspect: number, t: number, pan: Pan, reduced: boolean, walk: Walk = HOME_WALK): FinaleCam {
+/** 0 = up in the finale's view, 1 = standing on the snow; she comes down over `descendS` (reduced motion: already down) */
+export function groundLevel(t: number, reduced: boolean): number {
+  if (reduced) return 1;
+  const k = Math.min(1, Math.max(0, Number.isFinite(t) ? t / STAY_WORLD.descendS : 0));
+  return k * k * (3 - 2 * k);
+}
+
+export function wanderCamera(aspect: number, t: number, pan: Pan, reduced: boolean, walk: Walk = HOME_WALK, ground = 0): FinaleCam {
   const base = valleyCamera(aspect);
   const wk = clampWalk(walk);
   const p = clampPan(pan);
@@ -147,15 +157,17 @@ export function wanderCamera(aspect: number, t: number, pan: Pan, reduced: boole
   const w = (2 * Math.PI * tt) / STAY_WORLD.driftPeriodS;
   // the eye keeps its height above the snow wherever she walks
   const groundNow = terrainHeight(base.eye[0] + wk.x, base.eye[2] + wk.z) - terrainHeight(base.eye[0], base.eye[2]);
-  const eye: V3 = [
-    base.eye[0] + wk.x + sway * STAY_WORLD.driftM[0] * Math.sin(w),
-    base.eye[1] + groundNow + sway * STAY_WORLD.driftM[1] * Math.sin(w * 1.37 + 1),
-    base.eye[2] + wk.z,
-  ];
+  const gl = Math.min(1, Math.max(0, Number.isFinite(ground) ? ground : 0));
+  const ex = base.eye[0] + wk.x;
+  const ez = base.eye[2] + wk.z;
+  const eyeHigh = base.eye[1] + groundNow + sway * STAY_WORLD.driftM[1] * Math.sin(w * 1.37 + 1);
+  const eyeLow = terrainHeight(ex, ez) + STAY_WORLD.eyeHeightM;
+  const eye: V3 = [ex + sway * STAY_WORLD.driftM[0] * Math.sin(w), eyeHigh + (eyeLow - eyeHigh) * gl, ez];
   const d: V3 = [base.look[0] - base.eye[0], base.look[1] - base.eye[1], base.look[2] - base.eye[2]];
   const l = Math.hypot(d[0], d[1], d[2]) || 1;
   const h = Math.atan2(d[0], -d[2]) + (p.yawDeg + (wk.yawDeg ?? 0)) * D2R;
-  const e = Math.asin(d[1] / l) + p.pitchDeg * D2R;
+  // standing on the snow she looks level (the finale's view looked down from above); her own head turn is added on top
+  const e = (Math.asin(d[1] / l) * (1 - gl)) + p.pitchDeg * D2R;
   const dir: V3 = [Math.sin(h) * Math.cos(e), Math.sin(e), -Math.cos(h) * Math.cos(e)];
   return { eye, look: [eye[0] + dir[0] * 20, eye[1] + dir[1] * 20, eye[2] + dir[2] * 20], fovDeg: base.fovDeg };
 }

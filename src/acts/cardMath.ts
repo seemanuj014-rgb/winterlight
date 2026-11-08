@@ -6,7 +6,8 @@
 // DECISION `[A]` (owner may flip): the sky stage ends when ALL FIVE names are done (storyboard Act 3: "order is free", then Act 4); nothing is timed and nothing is forced, and what she has finished is kept
 // between visits (the progress store), so a reload comes back to where she was.
 
-export const CARD_STAGES = ['acts', 'sky', 'cake', 'release', 'envelope', 'finale', 'stay'] as const;
+// `nook` is a side trip: from stay a while into the nook (the cat, to pet) and back; it is not in the chain of the storyboard
+export const CARD_STAGES = ['acts', 'sky', 'cake', 'release', 'envelope', 'finale', 'stay', 'nook'] as const;
 export type CardStage = (typeof CARD_STAGES)[number];
 
 /** how many of the five names are done before the sky hands over */
@@ -21,7 +22,9 @@ export type CardEvent =
   | { type: 'release:done' }
   | { type: 'letter:done' }
   | { type: 'finale:done' }
-  | { type: 'stay:replay' };
+  | { type: 'stay:replay' }
+  | { type: 'stay:nook' }
+  | { type: 'nook:out' };
 
 export function isStage(s: string | null | undefined): s is CardStage {
   return !!s && (CARD_STAGES as readonly string[]).includes(s);
@@ -43,7 +46,9 @@ export function nextStage(stage: CardStage, ev: CardEvent): CardStage | null {
     case 'finale':
       return ev.type === 'finale:done' ? 'stay' : null;
     case 'stay':
-      return ev.type === 'stay:replay' ? 'finale' : null;
+      return ev.type === 'stay:replay' ? 'finale' : ev.type === 'stay:nook' ? 'nook' : null;
+    case 'nook':
+      return ev.type === 'nook:out' ? 'stay' : null;
   }
 }
 

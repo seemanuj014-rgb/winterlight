@@ -42,6 +42,8 @@ export interface WinterEvents {
   /** Phase 28: stay a while begins, and she leaves it for the letter or for the replay (`act6_finale.ts` replays on `to: 'replay'`; the card calls the letter's read-again on `to: 'letter'`). */
   'stay:enter': void;
   'stay:exit': { to: 'letter' | 'replay' };
+  /** she walked up to the cabin and chose to go inside the nook (the card builds the nook stage) */
+  'stay:nook': void;
   'stay:activity': { activity: 'wander' | 'pet' | 'constellations' | 'wishes' | 'secrets' };
 }
 

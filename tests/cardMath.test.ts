@@ -22,7 +22,7 @@ describe('card order (Phase 28)', () => {
       s = n!;
       seen.push(s);
     }
-    expect(seen).toEqual([...CARD_STAGES]);
+    expect(seen).toEqual(CARD_STAGES.filter((x) => x !== 'nook'));
   });
   it('the sky waits for all five names and never moves on four', () => {
     expect(nextStage('sky', { type: 'sky:count', done: 4 })).toBeNull();

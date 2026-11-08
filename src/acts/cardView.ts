@@ -10,6 +10,7 @@ import { createReleaseView, type ReleaseView } from './releaseView';
 import { createEnvelopeView, type EnvelopeView } from './envelopeView';
 import { createFinaleView, type FinaleView } from './finaleView';
 import { createStayView, type StayView } from './stayView';
+import { createPet } from '../interaction/pet';
 import { dipLevel, isStage, nextStage, switchesAt, type CardEvent, type CardStage } from './cardMath';
 
 // Phase 28: `?card` = the whole card in the order of the storyboard, one stage at a time (rules in `cardMath.ts`). Every stage is the real view that was looked at on its own (`?sky`, `?cake`,
@@ -71,8 +72,11 @@ export function createCardView(ctx: CardCtx): CardView {
   const { stage, scene, camera, canvas } = ctx;
   const start = isStage(ctx.params.get('from')) ? (ctx.params.get('from') as CardStage) : 'acts';
   // what the stage views are given: the card's own flags only (no `&at`, `&sound` or other single-view test knobs leak through)
+  let freshSkyOnce = false;
+  let skyChoice: HTMLElement | null = null;
   const stageParams = (): URLSearchParams => {
     const p = new URLSearchParams();
+    if (freshSkyOnce) p.set('fresh', '');
     for (const k of ['reduced', 'nopost', 'debug', 'tier', 'bloom', 'nohud', 'nomic', 'done', 'fresh']) if (ctx.params.has(k)) p.set(k, ctx.params.get(k) ?? '');
     return p;
   };
@@ -111,6 +115,8 @@ export function createCardView(ctx: CardCtx): CardView {
     const id = ++buildId;
     for (const f of offBus) f();
     offBus = [];
+    skyChoice?.remove();
+    skyChoice = null;
     view?.dispose();
     view = null;
     wipe(scene);
@@ -118,6 +124,7 @@ export function createCardView(ctx: CardCtx): CardView {
     camera.position.set(0, 0, 0);
     camera.rotation.set(0, 0, 0);
     const c = { stage, scene, camera, canvas, params: stageParams(), reduced: ctx.reduced };
+    freshSkyOnce = false;
     // each stage's bus: hand it to the sound, count its acts (the acts stage has its bus only once it is ready)
     const attach = (b: Bus<WinterEvents>): void => {
       if (id !== buildId) return;
@@ -169,7 +176,29 @@ export function createCardView(ctx: CardCtx): CardView {
         bus = v.bus;
         // the shape's own bookkeeping runs right AFTER this event, so count one tick later (counting now always sees one fewer, and the fifth shape never handed over)
         // she has finished all five before (a reload, or coming back to the link): hand over at once, or the card waits forever for a shape that is already done
-        if (v.doneCount() >= 5) queueMicrotask(() => feed({ type: 'sky:count', done: v.doneCount() }));
+        if (v.doneCount() >= 5) {
+          // already finished on an earlier visit: let HER choose, instead of skipping past the stars
+          const box = document.createElement('div');
+          box.style.cssText =
+            'position:fixed;left:0;right:0;bottom:calc(18px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;justify-content:center;z-index:20;padding:0 12px;';
+          const mk = (label: string, onClick: () => void, solid: boolean): void => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.textContent = label;
+            b.style.cssText =
+              'font:15px/1 system-ui,sans-serif;border-radius:999px;padding:12px 20px;touch-action:manipulation;border:1.5px solid rgba(207,227,242,.6);' +
+              (solid ? 'background:#cfe3f2;color:#0d1b2e;' : 'background:rgba(13,27,46,.85);color:#cfe3f2;');
+            b.addEventListener('click', onClick);
+            box.append(b);
+          };
+          mk('Play the stars again', () => {
+            freshSkyOnce = true;
+            build('sky');
+          }, false);
+          mk('Continue', () => feed({ type: 'sky:count', done: 5 }), true);
+          document.body.append(box);
+          skyChoice = box;
+        }
         offBus.push(v.bus.on('constellation:done', () => queueMicrotask(() => feed({ type: 'sky:count', done: v.doneCount() }))));
         break;
       }
@@ -206,6 +235,53 @@ export function createCardView(ctx: CardCtx): CardView {
         view = v;
         bus = v.bus;
         offBus.push(v.bus.on('stay:exit', (e) => e.to === 'replay' && feed({ type: 'stay:replay' })));
+        offBus.push(v.bus.on('stay:nook', () => feed({ type: 'stay:nook' })));
+        break;
+      }
+      case 'nook': {
+        // the sleepy nook again, this time to pet the cat in (the real `?pet=cat` view: the tour world with the pet hook instead of the acts)
+        const t0 = createTour({ stage, scene, camera, params: c.params, reduced: ctx.reduced });
+        let pet: ReturnType<typeof createPet> | null = null;
+        let ready = false;
+        const back = document.createElement('button');
+        back.type = 'button';
+        back.textContent = 'Back outside';
+        back.style.cssText =
+          'position:fixed;left:50%;transform:translateX(-50%);bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:16;font:15px/1 system-ui,sans-serif;border-radius:999px;padding:12px 22px;' +
+          'touch-action:manipulation;border:1.5px solid rgba(207,227,242,.6);background:#cfe3f2;color:#0d1b2e;';
+        back.addEventListener('click', () => feed({ type: 'nook:out' }));
+        document.body.append(back);
+        fade.style.opacity = '1';
+        view = {
+          update: (dt) => ready && t0.update(dt),
+          render: (ts) => ready && t0.render(ts),
+          resize: (a, w, h) => {
+            t0.resize(a);
+            pet?.resize(w, h);
+          },
+          setTier: (tier) => t0.setTier(tier),
+          dispose: () => {
+            ready = false;
+            pet?.dispose();
+            back.remove();
+          },
+        } as ActsStage;
+        void runTasks(t0.tasks).then(() => {
+          if (id !== buildId) return;
+          pet = createPet(t0.world, { canvas, params: c.params, reduced: ctx.reduced, place: 'cat' });
+          pet.resize(size.w, size.h);
+          t0.setActs(pet);
+          t0.resize(aspect);
+          t0.begin();
+          ready = true;
+          attach(pet.bus);
+          if (ctx.reduced) fade.style.opacity = '0';
+          else {
+            uncover = true;
+            dipT = switchesAt(false);
+            fade.style.opacity = '1';
+          }
+        });
         break;
       }
     }
@@ -218,7 +294,7 @@ export function createCardView(ctx: CardCtx): CardView {
 
   build(current);
   // the sky may already be finished from an earlier visit (the progress store keeps it): hand over without waiting for a new shape
-  if (current === 'sky' && ((view as SkyView | null)?.doneCount() ?? 0) >= 5) feed({ type: 'sky:count', done: 5 });
+  // (a finished sky on arrival now shows the choice above; it is not skipped)
 
   window.__card = {
     stage: () => current,
@@ -275,6 +351,7 @@ export function createCardView(ctx: CardCtx): CardView {
     dispose() {
       for (const f of offBus) f();
       view?.dispose();
+      skyChoice?.remove();
       fade.remove();
     },
   };

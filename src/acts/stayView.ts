@@ -22,6 +22,8 @@ import { createSkyText, type SkyText } from '../ui/skyText';
 import { replayControls } from '../ui/replayControls';
 import { createBus, type Bus, type WinterEvents } from '../state/events';
 import { createJoystick } from '../ui/joystick';
+import { CABIN_SITE } from '../world/groundMath';
+import { valleyCamera } from './finaleSkyMath';
 
 // Phase 28 test view: `?stay` = the PICTURE of stay a while: the valley exactly as the finale ended (the cabin glowing small, the aurora at its fullest), swaying a very little, turned by
 // a drag or the arrow keys (Home recentres), and the five finished shapes coming home from the crown to their patches in the sky (look up to see them). It starts staying at once.
@@ -185,6 +187,22 @@ export function createStayView(ctx: { stage: Stage; scene: THREE.Scene; camera: 
   const onPetUp = (e: PointerEvent): void => pet.release(e.clientX, e.clientY);
   // the walking stick (bottom-left): shown only while she is staying; `?nostick` hides it
   const stick = params.has('nostick') || typeof document === 'undefined' ? null : createJoystick(document.body, () => world.turnAround());
+  // "Go inside": shown when she is standing close to the cabin; it asks the card for the nook (the cat is in there to pet)
+  const inside = typeof document === 'undefined' ? null : document.createElement('button');
+  if (inside) {
+    inside.type = 'button';
+    inside.textContent = 'Go inside';
+    inside.style.cssText =
+      'position:fixed;left:50%;transform:translateX(-50%);bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:16;display:none;font:15px/1 system-ui,sans-serif;border-radius:999px;padding:12px 22px;' +
+      'touch-action:manipulation;border:1.5px solid rgba(207,227,242,.6);background:#cfe3f2;color:#0d1b2e;';
+    inside.addEventListener('click', () => bus.emit('stay:nook'));
+    document.body.append(inside);
+  }
+  const eye0 = valleyCamera(1).eye;
+  const nearCabin = (): boolean => {
+    const w = world.state().walk;
+    return Math.hypot(eye0[0] + w.x - CABIN_SITE.x, eye0[2] + w.z - CABIN_SITE.z) < 9;
+  };
   const input = createStayInput({ stay, world, stage: canvas, keys: window, width: () => wNow, claim: (x, y, k) => pet.claim(x, y, k) });
   // the keyboard's way to pet her: the B key, tapped or held (not when a control, field or dialog has the focus, nor with a modifier)
   const onPetKeyDown = (e: KeyboardEvent): void => {
@@ -239,6 +257,7 @@ export function createStayView(ctx: { stage: Stage; scene: THREE.Scene; camera: 
       const s = stick.value();
       world.move(s.x, s.y, dt);
     }
+    if (inside) inside.style.display = stay.machine.staying && world.state().time > 4 && nearCabin() ? 'block' : 'none';
     placeCamera();
     sky.setHome(world.state().home);
     applyPlan();
@@ -353,6 +372,7 @@ export function createStayView(ctx: { stage: Stage; scene: THREE.Scene; camera: 
       letter.dispose();
       finale.dispose();
       stick?.dispose();
+      inside?.remove();
       world.dispose();
       stay.dispose();
       text.dispose();
