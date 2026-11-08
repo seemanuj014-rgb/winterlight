@@ -1,0 +1,62 @@
+[
+ {
+  "check": "bunny is on screen (found by the picker)",
+  "pass": true,
+  "detail": "{\"x\": 162.5459612545902, \"y\": 402.32268862509846, \"radiusPx\": 36.43164120376451}"
+ },
+ {
+  "check": "touch hold on the snow near her: she hops toward the finger",
+  "pass": true,
+  "detail": "finger offset 90,30"
+ },
+ {
+  "check": "touch hold: she arrives at the finger",
+  "pass": true,
+  "detail": "{\"state\": \"sit\", \"mode\": \"idle\", \"x\": -0.87, \"z\": -3.38, \"yaw\": 1.46}"
+ },
+ {
+  "check": "touch hold: she really moved on the snow",
+  "pass": true,
+  "detail": "{'state': 'sit', 'mode': 'idle', 'x': -1.1, 'z': -3.4, 'yaw': 0.84} -> {'state': 'sit', 'mode': 'idle', 'x': -0.87, 'z': -3.38, 'yaw': 1.46}"
+ },
+ {
+  "check": "touch hold: Chamgadad leaned toward her",
+  "pass": true,
+  "detail": "['bunnyHop', 'bunnyArrive', 'chamLean']"
+ },
+ {
+  "check": "touch hold: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "touch tap near her: she is startled",
+  "pass": true,
+  "detail": "['bunnyStartle', 'bunnyHop', 'chamLean', 'chamEar']"
+ },
+ {
+  "check": "touch tap near her: she hides",
+  "pass": true,
+  "detail": "['bunnyStartle', 'bunnyHop', 'chamLean', 'chamEar', 'bunnyHop', 'bunnyHide']"
+ },
+ {
+  "check": "touch tap near her: she peeks out again later",
+  "pass": true,
+  "detail": "['bunnyStartle', 'bunnyHop', 'chamLean', 'chamEar', 'bunnyHop', 'bunnyHide', 'bunnyPeek']"
+ },
+ {
+  "check": "the bunny stays on the snow near her home after the flee",
+  "pass": true,
+  "detail": "{\"state\": \"peek\", \"mode\": \"peeking\", \"x\": -2.28, \"z\": -3.6, \"yaw\": -1.74}"
+ },
+ {
+  "check": "touch tap: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "touch tap far from her: no startle",
+  "pass": true,
+  "detail": "[]"
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "check": "Tab puts the focus ring on a star",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "Enter picks a star up, in the first shape (discovery order)",
+  "ok": true,
+  "detail": "{\"drawn\": 0, \"of\": 12, \"complete\": false, \"anchor\": \"sb1\", \"dragging\": false, \"hint\": false}"
+ },
+ {
+  "check": "Tab moves the focus ring to the next star",
+  "ok": true,
+  "detail": "sb2"
+ },
+ {
+  "check": "keys: no console errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

@@ -1,0 +1,28 @@
+{
+ "query": "stars&pre=4",
+ "size": [
+  1280,
+  720
+ ],
+ "frames": [
+  {
+   "at": 0.5,
+   "state": {
+    "drawn": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "anchor": null,
+    "dragging": false,
+    "finger": null,
+    "complete": false,
+    "hint": null,
+    "targets": [],
+    "progress": 0.5714285714285714,
+    "t": 0.49999999999999994
+   }
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "winterlight",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A 3D winter birthday card for Dhana. Built phase by phase with Claude.",
+  "scripts": {
+    "dev": "vite --host",
+    "leak-scan": "node tools/leak_scan.mjs",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "trace": "python3 tools/trace_silhouette.py"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.1",
+    "@types/three": "0.187.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.5",
+    "vitest": "5.1.0"
+  }
+}

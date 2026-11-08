@@ -1,0 +1,16 @@
+[
+ {
+  "t": 1,
+  "type": "bunnyHop",
+  "detail": "approach"
+ },
+ {
+  "t": 3.43,
+  "type": "bunnyArrive"
+ },
+ {
+  "t": 3.43,
+  "type": "chamLean",
+  "detail": "bunny"
+ }
+]

@@ -1,0 +1,72 @@
+{
+  "worstScene": [
+    "#e8f1f8",
+    "#6f86b8",
+    "#5a7196"
+  ],
+  "results": [
+    {
+      "id": "wish-card",
+      "ratio": 12.78,
+      "worstAgainst": "#e8f1f8",
+      "min": 4.5,
+      "pass": true
+    },
+    {
+      "id": "wish-card-edge",
+      "ratio": 7.71,
+      "worstAgainst": "#e8f1f8",
+      "min": 3,
+      "pass": true
+    },
+    {
+      "id": "button-glyph",
+      "ratio": 5.59,
+      "worstAgainst": "#e8f1f8",
+      "min": 3,
+      "pass": true
+    },
+    {
+      "id": "letter-text",
+      "ratio": 15.47,
+      "worstAgainst": "#e8f1f8",
+      "min": 4.5,
+      "pass": true
+    },
+    {
+      "id": "letter-close-glyph",
+      "ratio": 13.99,
+      "worstAgainst": "#0a1424",
+      "min": 3,
+      "pass": true
+    },
+    {
+      "id": "label-on-sky",
+      "ratio": 15.25,
+      "worstAgainst": "#0d1b2e",
+      "min": 4.5,
+      "pass": true
+    },
+    {
+      "id": "hint-on-nook",
+      "ratio": 5.19,
+      "worstAgainst": "#e8f1f8",
+      "min": 4.5,
+      "pass": true
+    },
+    {
+      "id": "replay-glyph",
+      "ratio": 5.59,
+      "worstAgainst": "#e8f1f8",
+      "min": 3,
+      "pass": true
+    },
+    {
+      "id": "hint-on-night",
+      "ratio": 14,
+      "worstAgainst": "#0d1b2e",
+      "min": 4.5,
+      "pass": true
+    }
+  ]
+}

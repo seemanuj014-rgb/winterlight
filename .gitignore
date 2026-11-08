@@ -1,0 +1,10 @@
+node_modules
+dist
+.vercel
+.DS_Store
+*.log
+__pycache__
+.env
+.env.*
+!.env.example
+tools/leak_terms.local.txt

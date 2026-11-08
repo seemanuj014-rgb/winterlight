@@ -1,0 +1,32 @@
+{
+ "query": "stars&pre=3&drag=c@-0.15,-0.95",
+ "size": [
+  390,
+  780
+ ],
+ "frames": [
+  {
+   "at": 0.5,
+   "state": {
+    "drawn": [
+     0,
+     1,
+     2
+    ],
+    "anchor": "c",
+    "dragging": true,
+    "finger": {
+     "x": -0.15,
+     "y": -0.95
+    },
+    "complete": false,
+    "hint": null,
+    "targets": [
+     "e"
+    ],
+    "progress": 0.42857142857142855,
+    "t": 0.49999999999999994
+   }
+  }
+ ]
+}

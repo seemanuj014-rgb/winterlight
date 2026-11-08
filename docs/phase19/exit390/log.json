@@ -1,0 +1,84 @@
+[
+ {
+  "t": 0.017,
+  "what": "start",
+  "shot": "nookWide",
+  "act": 1
+ },
+ {
+  "t": 4.017,
+  "what": "press",
+  "progress": 0,
+  "act": 1
+ },
+ {
+  "t": 7.367,
+  "what": "wake",
+  "after": 7.37,
+  "deep": 0,
+  "act": 1
+ },
+ {
+  "t": 12.283,
+  "what": "noticing",
+  "act": 1
+ },
+ {
+  "t": 17.3,
+  "what": "beckoning",
+  "act": 1
+ },
+ {
+  "t": 21.017,
+  "what": "done",
+  "act": 1
+ },
+ {
+  "t": 0.017,
+  "what": "start",
+  "hops": 3,
+  "reduced": false,
+  "act": 2
+ },
+ {
+  "t": 0.017,
+  "what": "hop",
+  "n": 1,
+  "of": 3,
+  "act": 2
+ },
+ {
+  "t": 0.8,
+  "what": "catWakes",
+  "act": 2
+ },
+ {
+  "t": 2.717,
+  "what": "hop",
+  "n": 2,
+  "of": 3,
+  "act": 2
+ },
+ {
+  "t": 5.417,
+  "what": "hop",
+  "n": 3,
+  "of": 3,
+  "act": 2
+ },
+ {
+  "t": 8.117,
+  "what": "atDoor",
+  "act": 2
+ },
+ {
+  "t": 9.017,
+  "what": "doorOpens",
+  "act": 2
+ },
+ {
+  "t": 12.533,
+  "what": "pushOut",
+  "act": 2
+ }
+]

@@ -1,0 +1,123 @@
+[
+ {
+  "check": "starts by itself (no &sound): the machine leaves idle",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "start then burst, in that order, once each",
+  "ok": true,
+  "detail": [
+   {
+    "at": 0,
+    "name": "release:start"
+   },
+   {
+    "at": 1.4,
+    "name": "release:burst"
+   }
+  ]
+ },
+ {
+  "check": "the burst comes when the hush ends (1.4 s of the machine's clock, within one capped frame)",
+  "ok": true,
+  "detail": 1.4
+ },
+ {
+  "check": "the machine's own log has the same two events as the bus",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "draw calls at low tier stay under 60",
+  "ok": true,
+  "detail": 18
+ },
+ {
+  "check": "no console errors in the plain run",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "&at=0.5: events so far are ['release:start']",
+  "ok": true,
+  "detail": [
+   "release:start"
+  ]
+ },
+ {
+  "check": "&at=0.5 (the hush): no lantern is up and no spark is alive",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "&at=0.5: no console errors",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "&at=3: events so far are ['release:start', 'release:burst']",
+  "ok": true,
+  "detail": [
+   "release:start",
+   "release:burst"
+  ]
+ },
+ {
+  "check": "&at=3 (after the burst): sparks are alive and at least one lantern is up",
+  "ok": true,
+  "detail": 6
+ },
+ {
+  "check": "&at=3: no console errors",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "&at=30: events so far are ['release:start', 'release:burst', 'release:done']",
+  "ok": true,
+  "detail": [
+   "release:start",
+   "release:burst",
+   "release:done"
+  ]
+ },
+ {
+  "check": "&at=30 (after the end): phase is done, no lantern up, spark life 0, clock held at the end",
+  "ok": true,
+  "detail": 22.40000000000001
+ },
+ {
+  "check": "&at=30: the empty sky still draws (calls > 0, <= 60) with no console error",
+  "ok": true,
+  "detail": 18
+ },
+ {
+  "check": "reduced motion: the same events at the same time (the clock is one clock)",
+  "ok": true,
+  "detail": [
+   "release:start",
+   "release:burst"
+  ]
+ },
+ {
+  "check": "&sound: before any touch the release has NOT started (a phone has no sound before one)",
+  "ok": true,
+  "detail": "idle"
+ },
+ {
+  "check": "&sound: a touch starts it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "&sound: the mute button is on the page",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "&sound: no console errors across the hush and the swell",
+  "ok": true,
+  "detail": []
+ }
+]

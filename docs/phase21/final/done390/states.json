@@ -1,0 +1,53 @@
+{
+ "query": "stars&pre=7",
+ "size": [
+  390,
+  780
+ ],
+ "frames": [
+  {
+   "at": 0.4,
+   "state": {
+    "drawn": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "anchor": null,
+    "dragging": false,
+    "finger": null,
+    "complete": true,
+    "hint": null,
+    "targets": [],
+    "progress": 1,
+    "t": 0.39999999999999997
+   }
+  },
+  {
+   "at": 3.0,
+   "state": {
+    "drawn": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "anchor": null,
+    "dragging": false,
+    "finger": null,
+    "complete": true,
+    "hint": null,
+    "targets": [],
+    "progress": 1,
+    "t": 2.9999999999999942
+   }
+  }
+ ]
+}

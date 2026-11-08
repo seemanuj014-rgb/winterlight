@@ -1,0 +1,308 @@
+[
+ {
+  "check": "starts arriving, the reader is closed",
+  "ok": true,
+  "detail": "arriving"
+ },
+ {
+  "check": "the envelope is waiting and can be opened",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "it is STILL waiting 4 s later: nothing opens it by itself",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no read-again button yet",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "Enter on the envelope opens it",
+  "ok": true,
+  "detail": "opening"
+ },
+ {
+  "check": "the reader is open after the opening",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the shown text equals the given text, byte for byte",
+  "ok": true,
+  "detail": "3503 vs 3503"
+ },
+ {
+  "check": "the letter column holds only the letter (no sign-off inside it)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the sign-off is its own block with the two given lines",
+  "ok": true,
+  "detail": [
+   "Made-up sign-off line",
+   "Made-up maker line"
+  ]
+ },
+ {
+  "check": "not read yet while only the top is shown",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "scrolled to the end: read counted once",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "scrolling again does not count a second read",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the saved progress says the letter is read",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the close button puts it away (state closed, reader hidden)",
+  "ok": true,
+  "detail": "closed"
+ },
+ {
+  "check": "the read-again button appears, 44x44",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the read-again button has a name",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "read again opens the reader straight away (no envelope)",
+  "ok": true,
+  "detail": "reading"
+ },
+ {
+  "check": "the button hides while she reads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the text is the same again",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no second read was counted",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "Escape closes it",
+  "ok": true,
+  "detail": "closed"
+ },
+ {
+  "check": "the bus saw: enter 5, arrive, open, read, close, done, open, close, done",
+  "ok": true,
+  "detail": [
+   "act:enter",
+   "letter:arrive",
+   "letter:open",
+   "letter:read",
+   "letter:close",
+   "act:done",
+   "letter:open",
+   "letter:close",
+   "act:done"
+  ]
+ },
+ {
+  "check": "no console errors",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "reduced: starts arriving, the reader is closed",
+  "ok": true,
+  "detail": "waiting"
+ },
+ {
+  "check": "reduced: the envelope is waiting and can be opened",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: it is STILL waiting 4 s later: nothing opens it by itself",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: no read-again button yet",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: Enter on the envelope opens it",
+  "ok": true,
+  "detail": "opening"
+ },
+ {
+  "check": "reduced: the reader is open after the opening",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the shown text equals the given text, byte for byte",
+  "ok": true,
+  "detail": "3503 vs 3503"
+ },
+ {
+  "check": "reduced: the letter column holds only the letter (no sign-off inside it)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the sign-off is its own block with the two given lines",
+  "ok": true,
+  "detail": [
+   "Made-up sign-off line",
+   "Made-up maker line"
+  ]
+ },
+ {
+  "check": "reduced: not read yet while only the top is shown",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: scrolled to the end: read counted once",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: scrolling again does not count a second read",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the saved progress says the letter is read",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the close button puts it away (state closed, reader hidden)",
+  "ok": true,
+  "detail": "closed"
+ },
+ {
+  "check": "reduced: the read-again button appears, 44x44",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the read-again button has a name",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: read again opens the reader straight away (no envelope)",
+  "ok": true,
+  "detail": "reading"
+ },
+ {
+  "check": "reduced: the button hides while she reads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the text is the same again",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: no second read was counted",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: Escape closes it",
+  "ok": true,
+  "detail": "closed"
+ },
+ {
+  "check": "reduced: the bus saw: enter 5, arrive, open, read, close, done, open, close, done",
+  "ok": true,
+  "detail": [
+   "act:enter",
+   "letter:arrive",
+   "letter:open",
+   "letter:read",
+   "letter:close",
+   "act:done",
+   "letter:open",
+   "letter:close",
+   "act:done"
+  ]
+ },
+ {
+  "check": "reduced: no console errors",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "awkward text (leading spaces, tab, emoji, Devanagari, trailing blank lines) is shown byte for byte",
+  "ok": true,
+  "detail": "'  leading spaces\\n\\n\\tTab\\nemoji \ud83d\ude2d\ud83d\ude2d and \u0928\u092e\u0938\u094d\u0924\u0947\\ntrailing   \\n\\n'"
+ },
+ {
+  "check": "a letter shorter than the screen counts as read at once",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no sign-off block when there is nothing to show",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no console errors (short letter)",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "390x780: nothing runs off the side",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "390x780: no console errors",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "360x640: nothing runs off the side",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "360x640: no console errors",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "1280x720: nothing runs off the side",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "1280x720: no console errors",
+  "ok": true,
+  "detail": []
+ }
+]

@@ -1,0 +1,82 @@
+[
+ {
+  "check": "stars are on screen (found by the picker)",
+  "pass": true,
+  "detail": "[[195, 161.78514649165078], [195, 315.30559786605426]]"
+ },
+ {
+  "check": "touch drag a to b: the line snaps on",
+  "pass": true,
+  "detail": "[0]"
+ },
+ {
+  "check": "the chain goes on from b to c without lifting",
+  "pass": true,
+  "detail": "[0, 1]"
+ },
+ {
+  "check": "the line is out and follows the finger",
+  "pass": true,
+  "detail": "{\"dragging\": true, \"anchor\": \"c\", \"finger\": {\"x\": 0.17690759977456638, \"y\": -0.3147810250277553}}"
+ },
+ {
+  "check": "lifting the finger drops the half-made line and keeps the two drawn",
+  "pass": true,
+  "detail": "[0, 1]"
+ },
+ {
+  "check": "touch: haptics asked for (a tick per joined line)",
+  "pass": true,
+  "detail": "[[8], [8]]"
+ },
+ {
+  "check": "a second drag from c carries on to d",
+  "pass": true,
+  "detail": "[0, 1, 2]"
+ },
+ {
+  "check": "touch: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "a finger a little off both stars still joins them (generous snap)",
+  "pass": true,
+  "detail": "[0]"
+ },
+ {
+  "check": "skimming a star with no line to it gives a soft 'wrong', no connect",
+  "pass": true,
+  "detail": "['start', 'wrong']"
+ },
+ {
+  "check": "...and the finger is still dragging",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "check": "...and it can still reach the right star afterwards",
+  "pass": true,
+  "detail": "[0]"
+ },
+ {
+  "check": "wrong star: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "tap a star: it is picked up",
+  "pass": true,
+  "detail": "\"a\""
+ },
+ {
+  "check": "tap its neighbour: the line is drawn",
+  "pass": true,
+  "detail": "[0]"
+ },
+ {
+  "check": "a tap in empty sky does nothing",
+  "pass": true,
+  "detail": "['select', 'connect']"
+ }
+]

@@ -1,0 +1,21 @@
+[
+ {
+  "t": 0.017,
+  "what": "start",
+  "shot": "nookWide",
+  "act": 1
+ },
+ {
+  "t": 20,
+  "what": "deepen",
+  "idle": 20,
+  "act": 1
+ },
+ {
+  "t": 23.85,
+  "what": "secret",
+  "id": "let-her-sleep",
+  "line": true,
+  "act": 1
+ }
+]

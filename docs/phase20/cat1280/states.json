@@ -1,0 +1,30 @@
+{
+ "query": "pet&stroke=3-12",
+ "size": [
+  1280,
+  720
+ ],
+ "frames": [
+  {
+   "at": 8.0,
+   "state": {
+    "place": "cat",
+    "location": "nook",
+    "cat": {
+     "state": "purr",
+     "purring": true,
+     "affection": 0.71
+    },
+    "bunny": {
+     "state": "sit",
+     "mode": "idle",
+     "x": -1.1,
+     "z": -3.4,
+     "yaw": 0.84
+    },
+    "chamgadad": "curiousLean",
+    "t": 8
+   }
+  }
+ ]
+}

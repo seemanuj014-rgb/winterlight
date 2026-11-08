@@ -1,0 +1,27 @@
+[
+ {
+  "check": "Tab puts the focus ring on a star",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "check": "Enter picks the star up",
+  "pass": true,
+  "detail": "\"a\""
+ },
+ {
+  "check": "Tab to its neighbour and Enter joins them",
+  "pass": true,
+  "detail": "{\"drawn\": [0], \"anchor\": \"b\", \"dragging\": false, \"finger\": null, \"complete\": false, \"hint\": null, \"targets\": [\"c\"], \"progress\": 0.14285714285714285, \"t\": 3.2333333333333267}"
+ },
+ {
+  "check": "u takes the line back",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "keys: no console errors",
+  "pass": true,
+  "detail": "[]"
+ }
+]

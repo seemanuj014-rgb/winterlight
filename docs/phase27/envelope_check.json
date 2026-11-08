@@ -1,0 +1,289 @@
+[
+ {
+  "check": "just started: arriving, not openable, nothing to pick",
+  "ok": true,
+  "detail": "arriving"
+ },
+ {
+  "check": "a click on the drifting envelope does nothing",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "at 9 s it is waiting and can be opened",
+  "ok": true,
+  "detail": "waiting"
+ },
+ {
+  "check": "no reader opened by itself",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "still waiting after a pause (nothing auto-advances)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the picker has the envelope while it waits",
+  "ok": true,
+  "detail": {
+   "x": 184.80586877301553,
+   "y": 468.5369316204923,
+   "radiusPx": 101.72165253240719
+  }
+ },
+ {
+  "check": "picker target is at least 44 px across",
+  "ok": true,
+  "detail": {
+   "x": 184.80586877301553,
+   "y": 468.5369316204923,
+   "radiusPx": 101.72165253240719
+  }
+ },
+ {
+  "check": "the picker target sits over the envelope",
+  "ok": true,
+  "detail": [
+   {
+    "x": 184.80586877301553,
+    "y": 468.5369316204923,
+    "radiusPx": 101.72165253240719
+   },
+   {
+    "x": 184.61263533130347,
+    "y": 468.8607294040208
+   }
+  ]
+ },
+ {
+  "check": "no extra DOM button over the picture",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "a click far away does nothing",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "draw calls under 60 at low tier",
+  "ok": true,
+  "detail": 22
+ },
+ {
+  "check": "a real touch tap on the envelope opens it",
+  "ok": true,
+  "detail": "1 try"
+ },
+ {
+  "check": "a tap on the envelope opens it (phase opening) and the reader is not open yet",
+  "ok": true,
+  "detail": "opening"
+ },
+ {
+  "check": "flap is open and the letter is out when the reader opens",
+  "ok": true,
+  "detail": [
+   2.701769682087222,
+   0.15
+  ]
+ },
+ {
+  "check": "the reader is open",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the reader shows a text that contains the given text byte for byte",
+  "ok": true,
+  "detail": 1453
+ },
+ {
+  "check": "nothing to pick while she reads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "Escape puts it away: phase closed",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the read-again button is on screen",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the envelope stays open (no second ritual)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "read again reopens the reader",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no console errors",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "reduced: just started: arriving, not openable, nothing to pick",
+  "ok": true,
+  "detail": "arriving"
+ },
+ {
+  "check": "reduced: a click on the drifting envelope does nothing",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: at 9 s it is waiting and can be opened",
+  "ok": true,
+  "detail": "waiting"
+ },
+ {
+  "check": "reduced: no reader opened by itself",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: still waiting after a pause (nothing auto-advances)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the picker has the envelope while it waits",
+  "ok": true,
+  "detail": {
+   "x": 194.99999999999997,
+   "y": 473.26651801824187,
+   "radiusPx": 101.48640404680864
+  }
+ },
+ {
+  "check": "reduced: picker target is at least 44 px across",
+  "ok": true,
+  "detail": {
+   "x": 194.99999999999997,
+   "y": 473.26651801824187,
+   "radiusPx": 101.48640404680864
+  }
+ },
+ {
+  "check": "reduced: the picker target sits over the envelope",
+  "ok": true,
+  "detail": [
+   {
+    "x": 194.99999999999997,
+    "y": 473.26651801824187,
+    "radiusPx": 101.48640404680864
+   },
+   {
+    "x": 194.99999999999997,
+    "y": 473.26651801824187
+   }
+  ]
+ },
+ {
+  "check": "reduced: no extra DOM button over the picture",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: a click far away does nothing",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: draw calls under 60 at low tier",
+  "ok": true,
+  "detail": 22
+ },
+ {
+  "check": "reduced: a tap on the envelope opens it (phase opening) and the reader is not open yet",
+  "ok": true,
+  "detail": "opening"
+ },
+ {
+  "check": "reduced: flap is open and the letter is out when the reader opens",
+  "ok": true,
+  "detail": [
+   2.701769682087222,
+   0.15
+  ]
+ },
+ {
+  "check": "reduced: the reader is open",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the reader shows a text that contains the given text byte for byte",
+  "ok": true,
+  "detail": 1453
+ },
+ {
+  "check": "reduced: nothing to pick while she reads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: Escape puts it away: phase closed",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the read-again button is on screen",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: the envelope stays open (no second ritual)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: read again reopens the reader",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reduced: no console errors",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "no keyboard stop on the envelope while it is still drifting",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "Tab reaches the envelope (one keyboard stop)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "a focus ring is on screen",
+  "ok": true,
+  "detail": 1
+ },
+ {
+  "check": "Enter opens it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no console errors (keyboard run)",
+  "ok": true,
+  "detail": []
+ },
+ {
+  "check": "Space opens it too",
+  "ok": true,
+  "detail": ""
+ }
+]

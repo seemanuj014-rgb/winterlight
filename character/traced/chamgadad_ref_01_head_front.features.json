@@ -1,0 +1,27 @@
+{
+ "source": "chamgadad_ref_01_head_front.png",
+ "dark_blobs_left_to_right": [
+  {
+   "cx": 0.46297,
+   "cy": 0.51064,
+   "rx": 0.05231,
+   "ry": 0.0588,
+   "area_px": 5777,
+   "full_cx": 0.45093,
+   "full_cy": 0.50602,
+   "full_rx": 0.05278,
+   "full_ry": 0.0588
+  },
+  {
+   "cx": 0.62038,
+   "cy": 0.54808,
+   "rx": 0.05278,
+   "ry": 0.05787,
+   "area_px": 6381,
+   "full_cx": 0.60741,
+   "full_cy": 0.54306,
+   "full_rx": 0.0537,
+   "full_ry": 0.05787
+  }
+ ]
+}

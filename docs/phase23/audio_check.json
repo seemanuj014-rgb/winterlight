@@ -1,0 +1,112 @@
+[
+ {
+  "name": "phone: mute button on screen",
+  "ok": true,
+  "detail": "{'x': 336, 'y': 10, 'width': 44, 'height': 44}"
+ },
+ {
+  "name": "phone: mute button >= 44 px",
+  "ok": true,
+  "detail": "(44, 44)"
+ },
+ {
+  "name": "phone: aria-label and aria-pressed",
+  "ok": true,
+  "detail": "('Sound on. Tap to turn it off.', 'false')"
+ },
+ {
+  "name": "phone: no AudioContext before the first tap",
+  "ok": true,
+  "detail": "locked"
+ },
+ {
+  "name": "phone: exactly one AudioContext after the first tap",
+  "ok": true,
+  "detail": "[1, 'running']"
+ },
+ {
+  "name": "phone: all 14 ?audio buttons tapped, no console error, still one context",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone: tap on mute flips aria-pressed",
+  "ok": true,
+  "detail": "('false', 'true')"
+ },
+ {
+  "name": "phone: mute state survives a reload",
+  "ok": true,
+  "detail": "true"
+ },
+ {
+  "name": "phone: ?stars&sound shows the mute button, no context before a tap, no errors",
+  "ok": true,
+  "detail": "(44, [])"
+ },
+ {
+  "name": "phone: ?sky&sound shows the mute button, no context before a tap, no errors",
+  "ok": true,
+  "detail": "(44, [])"
+ },
+ {
+  "name": "phone: ?stars without &sound has no mute button and no context",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop: mute button on screen",
+  "ok": true,
+  "detail": "{'x': 1226, 'y': 10, 'width': 44, 'height': 44}"
+ },
+ {
+  "name": "desktop: mute button >= 44 px",
+  "ok": true,
+  "detail": "(44, 44)"
+ },
+ {
+  "name": "desktop: aria-label and aria-pressed",
+  "ok": true,
+  "detail": "('Sound on. Tap to turn it off.', 'false')"
+ },
+ {
+  "name": "desktop: no AudioContext before the first tap",
+  "ok": true,
+  "detail": "locked"
+ },
+ {
+  "name": "desktop: exactly one AudioContext after the first tap",
+  "ok": true,
+  "detail": "[1, 'running']"
+ },
+ {
+  "name": "desktop: all 14 ?audio buttons tapped, no console error, still one context",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop: tap on mute flips aria-pressed",
+  "ok": true,
+  "detail": "('false', 'true')"
+ },
+ {
+  "name": "desktop: mute state survives a reload",
+  "ok": true,
+  "detail": "true"
+ },
+ {
+  "name": "desktop: ?stars&sound shows the mute button, no context before a tap, no errors",
+  "ok": true,
+  "detail": "(44, [])"
+ },
+ {
+  "name": "desktop: ?sky&sound shows the mute button, no context before a tap, no errors",
+  "ok": true,
+  "detail": "(44, [])"
+ },
+ {
+  "name": "desktop: ?stars without &sound has no mute button and no context",
+  "ok": true,
+  "detail": ""
+ }
+]

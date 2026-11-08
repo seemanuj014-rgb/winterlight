@@ -1,0 +1,42 @@
+[
+ {
+  "check": "mouse drag round the kite draws four lines",
+  "pass": true,
+  "detail": "[0, 1, 2, 3]"
+ },
+ {
+  "check": "the last line completes the shape",
+  "pass": true,
+  "detail": "{\"drawn\": [0, 1, 2, 3, 4, 5, 6], \"complete\": true}"
+ },
+ {
+  "check": "it completes exactly once",
+  "pass": true,
+  "detail": "1"
+ },
+ {
+  "check": "after completion more input changes nothing",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "check": "mouse: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "ordered shape: a line out of order is refused (soft wrong, nothing drawn)",
+  "pass": true,
+  "detail": "['wrong']"
+ },
+ {
+  "check": "ordered shape: drawn in order, it completes",
+  "pass": true,
+  "detail": "[0, 1, 2, 3]"
+ },
+ {
+  "check": "ordered: no console errors",
+  "pass": true,
+  "detail": "[]"
+ }
+]

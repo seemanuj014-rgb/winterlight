@@ -1,0 +1,87 @@
+[
+ {
+  "check": "cat is on screen (found by the picker)",
+  "pass": true,
+  "detail": "{\"x\": 195.11703137054602, \"y\": 362.998002044715, \"radiusPx\": 42.92109332029961}"
+ },
+ {
+  "check": "touch drag over the cat: she starts to purr",
+  "pass": true,
+  "detail": "{\"state\": \"purr\", \"purring\": true, \"affection\": 0.361}"
+ },
+ {
+  "check": "touch drag: the log has purrStart and Chamgadad leaning",
+  "pass": true,
+  "detail": "['catEar', 'purrStart', 'chamLean', 'catEar']"
+ },
+ {
+  "check": "touch drag: haptics were asked for",
+  "pass": true,
+  "detail": "[[18]]"
+ },
+ {
+  "check": "touch drag: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "touch hold on the cat: she purrs under the hand",
+  "pass": true,
+  "detail": "{\"state\": \"purr\", \"purring\": true, \"affection\": 0.34}"
+ },
+ {
+  "check": "touch hold: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "touch tap on the cat: an ear flick",
+  "pass": true,
+  "detail": "['catEar']"
+ },
+ {
+  "check": "touch tap on the cat: she does not purr",
+  "pass": true,
+  "detail": "{\"state\": \"sit\", \"purring\": false, \"affection\": 0.003}"
+ },
+ {
+  "check": "touch tap: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "touch tap far from the cat: nothing is logged",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "sleeping cat starts asleep",
+  "pass": true,
+  "detail": "{\"state\": \"sleep\", \"purring\": false, \"affection\": 0}"
+ },
+ {
+  "check": "sleeping cat: wakes under the hand",
+  "pass": true,
+  "detail": "{\"state\": \"wake\", \"purring\": true, \"affection\": 0.361}"
+ },
+ {
+  "check": "sleeping cat: then purrs",
+  "pass": true,
+  "detail": "{\"state\": \"wake\", \"purring\": true, \"affection\": 0.361}"
+ },
+ {
+  "check": "sleeping cat: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "mouse drag over the cat: she purrs",
+  "pass": true,
+  "detail": "{\"state\": \"purr\", \"purring\": true, \"affection\": 0.422}"
+ },
+ {
+  "check": "mouse drag: no console errors",
+  "pass": true,
+  "detail": "[]"
+ }
+]

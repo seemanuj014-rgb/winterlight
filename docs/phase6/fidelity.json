@@ -1,0 +1,21 @@
+{
+ "source": "software render of head_mesh.json",
+ "regions": {
+  "headAndEars": {
+   "iou": 0.988,
+   "target": 0.97,
+   "pass": true
+  },
+  "neckAndChest": {
+   "iou": 0.9946,
+   "target": 0.95,
+   "pass": true
+  }
+ },
+ "pixels": {
+  "figure": 373905,
+  "truth": 376606,
+  "only_render": 582,
+  "only_drawing": 3283
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "query": "debug&hold=4-8&pointer=0.5,0.2",
+ "size": [
+  390,
+  780
+ ],
+ "frames": [
+  {
+   "at": 0.5,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0,
+    "lamp": 0.55,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookWide",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 3.0,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0,
+    "lamp": 0.55,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookWide",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 5.0,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0.217,
+    "lamp": 0.595,
+    "hint": 0.17,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookWide",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 7.0,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0.883,
+    "lamp": 0.873,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookWide",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 8.5,
+   "state": {
+    "act": 1,
+    "phase": "waking",
+    "progress": 1,
+    "lamp": 1,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookBed",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 10.0,
+   "state": {
+    "act": 1,
+    "phase": "waking",
+    "progress": 1,
+    "lamp": 1,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookBed",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 12.0,
+   "state": {
+    "act": 1,
+    "phase": "waking",
+    "progress": 1,
+    "lamp": 1,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookBed",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 14.0,
+   "state": {
+    "act": 1,
+    "phase": "noticing",
+    "progress": 1,
+    "lamp": 1,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookBed",
+    "location": "nook"
+   }
+  }
+ ]
+}

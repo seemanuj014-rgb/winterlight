@@ -1,0 +1,64 @@
+{
+ "query": "hold=4-8&reduced",
+ "size": [
+  390,
+  780
+ ],
+ "frames": [
+  {
+   "at": 24.0,
+   "state": {
+    "act": 2,
+    "phase": "walking",
+    "door": 0,
+    "shot": "nookWalk",
+    "shotElapsed": 2.97,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 30.0,
+   "state": {
+    "act": 2,
+    "phase": "walking",
+    "door": 0,
+    "shot": "nookWalk",
+    "shotElapsed": 8.97,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 36.0,
+   "state": {
+    "act": 2,
+    "phase": "opening",
+    "door": 0.09,
+    "shot": "nookAtDoor",
+    "shotElapsed": 2.02,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 40.0,
+   "state": {
+    "act": 2,
+    "phase": "opening",
+    "door": 1,
+    "shot": "nookAtDoor",
+    "shotElapsed": 6.02,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 44.0,
+   "state": {
+    "act": 2,
+    "phase": "pushOut",
+    "door": 1,
+    "shot": "doorOut",
+    "shotElapsed": 2.97,
+    "location": "outside"
+   }
+  }
+ ]
+}

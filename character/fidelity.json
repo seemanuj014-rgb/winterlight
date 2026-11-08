@@ -1,0 +1,20 @@
+{
+  "_note": "Phase 5. The numeric fidelity target for Chamgadad at the reference framing. Mirrored in src/character/chamgadad/fidelity.ts; tests/character.test.ts fails if the two disagree. [A] = my proposal, not yet confirmed by the owner.",
+  "reference": "chamgadad_ref_01_head_front.png",
+  "framing": {
+    "image_px": [1080, 1080],
+    "coords": "normalised 0..1, x right, y down, the drawing's own frame",
+    "camera": "orthographic, image plane = the drawing; the 3D render must be framed so that the traced contour lands on the same normalised coordinates"
+  },
+  "compare_against": "filled polygon of character/traced/chamgadad_ref_01_head_front.silhouette.json (outer edge of the ink line)",
+  "regions": {
+    "head_and_ears": { "y_min": 0, "y_max": 0.72, "iou_min": 0.97, "source": "PHASES.md Phase 5 default" },
+    "neck_and_chest": { "y_min": 0.72, "y_max": 0.995, "iou_min": 0.95, "source": "[A] mine: looser, the neck and chest edge is the part the drawing cuts off" }
+  },
+  "eye_centre_tolerance": { "value": 0.01, "unit": "image fraction (about 11 px at 1080)", "applies_to": "full_cx / full_cy in character/traced/*.features.json", "source": "[A] mine" },
+  "head_volume_method": {
+    "decision": "inflation",
+    "summary": "Distance-to-edge height field from the traced head contour, smoothed, with a fitted back so side and three-quarter views stay plush. Ears are separate meshes attached at traced bases. The traced contour is the union of head, ears and neck, so Phase 6 must first split it into head, left ear, right ear and neck outlines from the ink strokes (the ear bases are hidden behind the head). [A]: the back and sides are inferred."
+  },
+  "ink": "outline weight is checked by eye in Phase 11, not by IoU"
+}

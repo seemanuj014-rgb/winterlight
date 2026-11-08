@@ -1,0 +1,78 @@
+[
+ {
+  "type": "start",
+  "star": "a",
+  "t": 0
+ },
+ {
+  "type": "connect",
+  "edge": 0,
+  "from": "a",
+  "to": "b",
+  "t": 0,
+  "drawn": 1,
+  "of": 7
+ },
+ {
+  "type": "release",
+  "t": 0,
+  "partial": true
+ },
+ {
+  "type": "start",
+  "star": "b",
+  "t": 0
+ },
+ {
+  "type": "connect",
+  "edge": 1,
+  "from": "b",
+  "to": "c",
+  "t": 0,
+  "drawn": 2,
+  "of": 7
+ },
+ {
+  "type": "release",
+  "t": 0,
+  "partial": true
+ },
+ {
+  "type": "start",
+  "star": "c",
+  "t": 0
+ },
+ {
+  "type": "connect",
+  "edge": 2,
+  "from": "c",
+  "to": "d",
+  "t": 0,
+  "drawn": 3,
+  "of": 7
+ },
+ {
+  "type": "release",
+  "t": 0,
+  "partial": true
+ },
+ {
+  "type": "start",
+  "star": "d",
+  "t": 0
+ },
+ {
+  "type": "connect",
+  "edge": 3,
+  "from": "d",
+  "to": "a",
+  "t": 0,
+  "drawn": 4,
+  "of": 7
+ },
+ {
+  "type": "release",
+  "t": 0,
+  "partial": true
+ }
+]

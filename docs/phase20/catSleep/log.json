@@ -1,0 +1,27 @@
+[
+ {
+  "t": 1,
+  "type": "catEar"
+ },
+ {
+  "t": 3.38,
+  "type": "purrStart"
+ },
+ {
+  "t": 3.38,
+  "type": "chamLean",
+  "detail": "cat"
+ },
+ {
+  "t": 6.8,
+  "type": "catBlink"
+ },
+ {
+  "t": 6.8,
+  "type": "chamBlink"
+ },
+ {
+  "t": 6.8,
+  "type": "chamEar"
+ }
+]

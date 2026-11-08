@@ -1,0 +1,18 @@
+{
+ "source": "chamgadad_ref_01_head_front.png",
+ "method": "median of small pixel patches, measured not guessed",
+ "colors": {
+  "body_base": "#a7b9c3",
+  "body_chest": "#a8bac2",
+  "rim_light_warm_edge": "#d7d9d5",
+  "ear_front_pale_blue": "#c4d6e1",
+  "ear_inner_lavender": "#87889c",
+  "ear_back_shadow_teal": "#6f8188",
+  "ear_right_pale_blue": "#c1d1dc",
+  "eye_black": "#09080a",
+  "eye_highlight_white": "#f7f8fa",
+  "eye_lower_pale_blue_tab": "#c0d2dc",
+  "outline_ink": "#010102"
+ },
+ "notes": "Colors are from a flat digital drawing. In 3D they are BASE colors for a toon ramp; lit/shadow tones come from the ramp, not extra hues."
+}

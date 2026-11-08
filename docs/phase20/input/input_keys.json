@@ -1,0 +1,52 @@
+[
+ {
+  "check": "keyboard cat: Tab puts the focus ring on her",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "check": "keyboard cat: holding Enter is a hand on her, she purrs",
+  "pass": true,
+  "detail": "{\"state\": \"purr\", \"purring\": true, \"affection\": 0.35}"
+ },
+ {
+  "check": "keyboard cat: arrows while held keep her purring",
+  "pass": true,
+  "detail": "{\"state\": \"purr\", \"purring\": true, \"affection\": 0.63}"
+ },
+ {
+  "check": "keyboard cat: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "keyboard cat: a quick Enter flicks an ear",
+  "pass": true,
+  "detail": "['catEar']"
+ },
+ {
+  "check": "keyboard bunny: Tab puts the focus ring on her",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "check": "keyboard bunny: holding Enter, she hops toward the hand",
+  "pass": true,
+  "detail": "['bunnyHop']"
+ },
+ {
+  "check": "keyboard bunny: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "keyboard bunny: a quick Enter startles her",
+  "pass": true,
+  "detail": "['bunnyStartle', 'bunnyHop', 'chamLean', 'chamEar']"
+ },
+ {
+  "check": "keyboard bunny: she hides",
+  "pass": true,
+  "detail": "['bunnyStartle', 'bunnyHop', 'chamLean', 'chamEar', 'bunnyHop', 'bunnyHide']"
+ }
+]

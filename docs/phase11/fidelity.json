@@ -1,0 +1,190 @@
+{
+ "console_errors": [],
+ "source": "screenshot: render_whole.png",
+ "regions": {
+  "headAndEars": {
+   "iou": 0.9791,
+   "target": 0.97,
+   "pass": true
+  },
+  "neckAndChest": {
+   "iou": 0.9922,
+   "target": 0.95,
+   "pass": true
+  }
+ },
+ "pixels": {
+  "figure": 376405,
+  "truth": 376606,
+  "only_render": 3249,
+  "only_drawing": 3450
+ },
+ "worst_blobs": [
+  {
+   "kind": "drawing_only",
+   "px": 834,
+   "centre": [
+    0.664,
+    0.356
+   ],
+   "box": [
+    0.626,
+    0.33,
+    0.704,
+    0.383
+   ]
+  },
+  {
+   "kind": "render_only",
+   "px": 664,
+   "centre": [
+    0.826,
+    0.521
+   ],
+   "box": [
+    0.783,
+    0.494,
+    0.868,
+    0.544
+   ]
+  },
+  {
+   "kind": "drawing_only",
+   "px": 211,
+   "centre": [
+    0.362,
+    0.477
+   ],
+   "box": [
+    0.346,
+    0.458,
+    0.379,
+    0.495
+   ]
+  },
+  {
+   "kind": "render_only",
+   "px": 202,
+   "centre": [
+    0.744,
+    0.899
+   ],
+   "box": [
+    0.735,
+    0.881,
+    0.753,
+    0.919
+   ]
+  }
+ ],
+ "bands": [
+  {
+   "y": [
+    0.0,
+    0.083
+   ],
+   "render_only_px": 0,
+   "drawing_only_px": 0,
+   "iou": 0.0
+  },
+  {
+   "y": [
+    0.083,
+    0.167
+   ],
+   "render_only_px": 0,
+   "drawing_only_px": 0,
+   "iou": 0.0
+  },
+  {
+   "y": [
+    0.167,
+    0.25
+   ],
+   "render_only_px": 161,
+   "drawing_only_px": 93,
+   "iou": 0.9725
+  },
+  {
+   "y": [
+    0.25,
+    0.333
+   ],
+   "render_only_px": 251,
+   "drawing_only_px": 690,
+   "iou": 0.953
+  },
+  {
+   "y": [
+    0.333,
+    0.417
+   ],
+   "render_only_px": 222,
+   "drawing_only_px": 1324,
+   "iou": 0.9654
+  },
+  {
+   "y": [
+    0.417,
+    0.5
+   ],
+   "render_only_px": 279,
+   "drawing_only_px": 405,
+   "iou": 0.9866
+  },
+  {
+   "y": [
+    0.5,
+    0.583
+   ],
+   "render_only_px": 768,
+   "drawing_only_px": 228,
+   "iou": 0.9789
+  },
+  {
+   "y": [
+    0.583,
+    0.667
+   ],
+   "render_only_px": 375,
+   "drawing_only_px": 34,
+   "iou": 0.9908
+  },
+  {
+   "y": [
+    0.667,
+    0.75
+   ],
+   "render_only_px": 176,
+   "drawing_only_px": 155,
+   "iou": 0.9916
+  },
+  {
+   "y": [
+    0.75,
+    0.833
+   ],
+   "render_only_px": 29,
+   "drawing_only_px": 201,
+   "iou": 0.9936
+  },
+  {
+   "y": [
+    0.833,
+    0.917
+   ],
+   "render_only_px": 223,
+   "drawing_only_px": 236,
+   "iou": 0.9886
+  },
+  {
+   "y": [
+    0.917,
+    1.0
+   ],
+   "render_only_px": 765,
+   "drawing_only_px": 84,
+   "iou": 0.982
+  }
+ ]
+}

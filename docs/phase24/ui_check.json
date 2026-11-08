@@ -1,0 +1,367 @@
+[
+ {
+  "name": "360x640: card visible",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "360x640: inside the safe area",
+  "ok": true,
+  "detail": "x98 y287 w165 h66"
+ },
+ {
+  "name": "360x640: not wider than 26rem or 86% of the usable width",
+  "ok": true,
+  "detail": "w165"
+ },
+ {
+  "name": "360x640: text is exactly the file's text",
+  "ok": true,
+  "detail": "'TODO_OWNER'"
+ },
+ {
+  "name": "360x640: card has focus and is a dialog",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "360x640: a long text stays inside the screen",
+  "ok": true,
+  "detail": "y140 bottom500"
+ },
+ {
+  "name": "360x640: Devanagari test glyphs have width",
+  "ok": true,
+  "detail": "145px"
+ },
+ {
+  "name": "360x640: Escape closes the card",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "360x640: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "390x780_notch: card visible",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "390x780_notch: inside the safe area",
+  "ok": true,
+  "detail": "x108 y363 w175 h68"
+ },
+ {
+  "name": "390x780_notch: not wider than 26rem or 86% of the usable width",
+  "ok": true,
+  "detail": "w175"
+ },
+ {
+  "name": "390x780_notch: text is exactly the file's text",
+  "ok": true,
+  "detail": "'TODO_OWNER'"
+ },
+ {
+  "name": "390x780_notch: card has focus and is a dialog",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "390x780_notch: a long text stays inside the screen",
+  "ok": true,
+  "detail": "y203 bottom590"
+ },
+ {
+  "name": "390x780_notch: Devanagari test glyphs have width",
+  "ok": true,
+  "detail": "157px"
+ },
+ {
+  "name": "390x780_notch: Escape closes the card",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "390x780_notch: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "844x390_sideways: card visible",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "844x390_sideways: inside the safe area",
+  "ok": true,
+  "detail": "x331 y155 w183 h58"
+ },
+ {
+  "name": "844x390_sideways: not wider than 26rem or 86% of the usable width",
+  "ok": true,
+  "detail": "w183"
+ },
+ {
+  "name": "844x390_sideways: text is exactly the file's text",
+  "ok": true,
+  "detail": "'TODO_OWNER'"
+ },
+ {
+  "name": "844x390_sideways: card has focus and is a dialog",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "844x390_sideways: a long text stays inside the screen",
+  "ok": true,
+  "detail": "y19 bottom350"
+ },
+ {
+  "name": "844x390_sideways: Devanagari test glyphs have width",
+  "ok": true,
+  "detail": "177px"
+ },
+ {
+  "name": "844x390_sideways: Escape closes the card",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "844x390_sideways: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop: card visible",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop: inside the safe area",
+  "ok": true,
+  "detail": "x545 y324 w191 h71"
+ },
+ {
+  "name": "desktop: not wider than 26rem or 86% of the usable width",
+  "ok": true,
+  "detail": "w191"
+ },
+ {
+  "name": "desktop: text is exactly the file's text",
+  "ok": true,
+  "detail": "'TODO_OWNER'"
+ },
+ {
+  "name": "desktop: card has focus and is a dialog",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop: a long text stays inside the screen",
+  "ok": true,
+  "detail": "y178 bottom542"
+ },
+ {
+  "name": "desktop: Devanagari test glyphs have width",
+  "ok": true,
+  "detail": "177px"
+ },
+ {
+  "name": "desktop: Escape closes the card",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter 360x640: text is exactly what was given, line breaks kept",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter 360x640: column inside the screen and safe area",
+  "ok": true,
+  "detail": "x22 w315"
+ },
+ {
+  "name": "letter 360x640: about 28 to 66 characters a line",
+  "ok": true,
+  "detail": "35 at 18.0px"
+ },
+ {
+  "name": "letter 360x640: first line is clear of the close button and the notch",
+  "ok": true,
+  "detail": "top67"
+ },
+ {
+  "name": "letter 360x640: close button 44x44 inside the notch",
+  "ok": true,
+  "detail": "y10"
+ },
+ {
+  "name": "letter 360x640: it scrolls and the scroller has focus",
+  "ok": true,
+  "detail": "2410 > 640"
+ },
+ {
+  "name": "letter 360x640: progress reads 1 at the bottom",
+  "ok": true,
+  "detail": "1.00"
+ },
+ {
+  "name": "letter 360x640: Escape closes it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter 360x640: the close button closes it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter 360x640: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter 390x780_notch: text is exactly what was given, line breaks kept",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter 390x780_notch: column inside the screen and safe area",
+  "ok": true,
+  "detail": "x22 w345"
+ },
+ {
+  "name": "letter 390x780_notch: about 28 to 66 characters a line",
+  "ok": true,
+  "detail": "36 at 19.1px"
+ },
+ {
+  "name": "letter 390x780_notch: first line is clear of the close button and the notch",
+  "ok": true,
+  "detail": "top114"
+ },
+ {
+  "name": "letter 390x780_notch: close button 44x44 inside the notch",
+  "ok": true,
+  "detail": "y57"
+ },
+ {
+  "name": "letter 390x780_notch: it scrolls and the scroller has focus",
+  "ok": true,
+  "detail": "2568 > 780"
+ },
+ {
+  "name": "letter 390x780_notch: progress reads 1 at the bottom",
+  "ok": true,
+  "detail": "1.00"
+ },
+ {
+  "name": "letter 390x780_notch: Escape closes it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter 390x780_notch: the close button closes it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter 390x780_notch: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter desktop: text is exactly what was given, line breaks kept",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter desktop: column inside the screen and safe area",
+  "ok": true,
+  "detail": "x320 w640"
+ },
+ {
+  "name": "letter desktop: about 28 to 66 characters a line",
+  "ok": true,
+  "detail": "64 at 20.0px"
+ },
+ {
+  "name": "letter desktop: first line is clear of the close button and the notch",
+  "ok": true,
+  "detail": "top67"
+ },
+ {
+  "name": "letter desktop: close button 44x44 inside the notch",
+  "ok": true,
+  "detail": "y10"
+ },
+ {
+  "name": "letter desktop: it scrolls and the scroller has focus",
+  "ok": true,
+  "detail": "1577 > 720"
+ },
+ {
+  "name": "letter desktop: progress reads 1 at the bottom",
+  "ok": true,
+  "detail": "1.00"
+ },
+ {
+  "name": "letter desktop: Escape closes it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter desktop: the close button closes it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter desktop: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "letter reduced motion: no transition and fully shown at once",
+  "ok": true,
+  "detail": "['0s', '1']"
+ },
+ {
+  "name": "sound button: 44x44, 10 px under the notch, 10 px from the right",
+  "ok": true,
+  "detail": "{\"w\": 44, \"h\": 44, \"top\": 57, \"right\": 10}"
+ },
+ {
+  "name": "sound button: look comes from the theme (no inline style)",
+  "ok": true,
+  "detail": "None"
+ },
+ {
+  "name": "sound button: a keyboard focus ring shows",
+  "ok": true,
+  "detail": "solid"
+ },
+ {
+  "name": "reduced motion: card and labels have no transition",
+  "ok": true,
+  "detail": "['0s', '0s']"
+ },
+ {
+  "name": "reduced motion: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "normal motion: the card does fade (0.6 s)",
+  "ok": true,
+  "detail": "0.6s"
+ }
+]

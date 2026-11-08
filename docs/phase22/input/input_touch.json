@@ -1,0 +1,97 @@
+[
+ {
+  "check": "five shapes in the sky, none done, the first is the one that may hint",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "check": "every star of every shape is on the screen (found by the picker)",
+  "ok": true,
+  "detail": "55 stars"
+ },
+ {
+  "check": "kaaju katli: touch drags star to star finish the whole shape",
+  "ok": true,
+  "detail": "{\"drawn\": 6, \"of\": 6, \"complete\": true, \"anchor\": null, \"dragging\": false, \"hint\": false}"
+ },
+ {
+  "check": "it completes exactly once",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "the wish card opens by itself",
+  "ok": true,
+  "detail": "{\"open\": true, \"id\": \"kaaju-katli\", \"text\": \"TODO_OWNER\"}"
+ },
+ {
+  "check": "the card shows the exact words of content/wishes.json for it (a placeholder shows as it is)",
+  "ok": true,
+  "detail": "'TODO_OWNER'"
+ },
+ {
+  "check": "the name appears (from names.json)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "touch: the shape is saved",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "touch: haptics asked for",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "a tap on the card puts it away",
+  "ok": true,
+  "detail": "false"
+ },
+ {
+  "check": "a tap on a finished shape's star shows its wish again",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "Escape puts the card away",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "tap a strawberry star: it is picked up",
+  "ok": true,
+  "detail": "{\"drawn\": 0, \"of\": 12, \"complete\": false, \"anchor\": \"sb1\", \"dragging\": false, \"hint\": false}"
+ },
+ {
+  "check": "a tap on another shape: strawberry lets go, bumblebee picks up",
+  "ok": true,
+  "detail": "{\"strawberry\": null, \"bumblebee\": \"bb1\"}"
+ },
+ {
+  "check": "a tap in empty sky lets go of it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "tap-then-tap draws the line",
+  "ok": true,
+  "detail": "{\"drawn\": 1, \"of\": 12, \"complete\": false, \"anchor\": \"sb2\", \"dragging\": false, \"hint\": false}"
+ },
+ {
+  "check": "the other shapes are untouched",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "a drag that starts on a finished shape does not draw anything",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "touch: no console errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

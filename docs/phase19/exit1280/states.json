@@ -1,0 +1,103 @@
+{
+ "query": "hold=4-8&pointer=-0.4,0.3",
+ "size": [
+  1280,
+  720
+ ],
+ "frames": [
+  {
+   "at": 9.0,
+   "state": {
+    "act": 1,
+    "phase": "waking",
+    "progress": 1,
+    "lamp": 1,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookBed",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 16.0,
+   "state": {
+    "act": 1,
+    "phase": "noticing",
+    "progress": 1,
+    "lamp": 1,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookBed",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 24.0,
+   "state": {
+    "act": 2,
+    "phase": "walking",
+    "door": 0,
+    "shot": "nookWalk",
+    "shotElapsed": 2.97,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 27.0,
+   "state": {
+    "act": 2,
+    "phase": "walking",
+    "door": 0,
+    "shot": "nookWalk",
+    "shotElapsed": 5.97,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 31.0,
+   "state": {
+    "act": 2,
+    "phase": "opening",
+    "door": 0.48,
+    "shot": "nookAtDoor",
+    "shotElapsed": 1.87,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 33.0,
+   "state": {
+    "act": 2,
+    "phase": "opening",
+    "door": 1,
+    "shot": "nookAtDoor",
+    "shotElapsed": 3.87,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 38.0,
+   "state": {
+    "act": 2,
+    "phase": "pushOut",
+    "door": 1,
+    "shot": "doorOut",
+    "shotElapsed": 4.45,
+    "location": "outside"
+   }
+  },
+  {
+   "at": 46.0,
+   "state": {
+    "act": 2,
+    "phase": "pushOut",
+    "door": 1,
+    "shot": "snowWalk",
+    "shotElapsed": 5.93,
+    "location": "outside"
+   }
+  }
+ ]
+}

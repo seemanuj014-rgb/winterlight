@@ -1,0 +1,164 @@
+/* Phase 24: the one place the card's text styles live. Numbers mirror src/ui/themeMath.ts (tests/ui.test.ts fails if they drift).
+   Fonts: SYSTEM stacks for now. Self-hosted fonts and the Devanagari plan wait for the owner's language answer (Q6 in REQUIREMENTS_ORIGINAL.md).
+   The Devanagari names are in the stacks so Hindi text falls back to a real Devanagari face on the phone instead of boxes. */
+:root {
+  --wl-night: #0d1b2e;
+  --wl-night-mid: #1c3556;
+  --wl-card-bg: #0e1a2c;
+  --wl-card-alpha: 0.9;
+  --wl-card-text: #f4fbff;
+  --wl-card-edge: #9cc8ff;
+  --wl-label: #e6f2ff;
+  --wl-hint: #f1e6d2;
+  --wl-focus: #ffe2aa;
+  --wl-letter-bg: #0a1424;
+  --wl-letter-alpha: 0.94;
+  --wl-button-fg: #cfe3f2;
+  --wl-button-bg: #0d1b2e;
+  --wl-button-alpha: 0.72;
+  --wl-font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Noto Serif Devanagari', 'Kohinoor Devanagari', 'Nirmala UI', 'Times New Roman', serif;
+  --wl-font-ui: ui-rounded, 'SF Pro Rounded', 'Nunito', 'Segoe UI', system-ui, 'Noto Sans Devanagari', sans-serif;
+  --wl-card-font: clamp(17px, 4.8vw, 21px);
+  --wl-card-measure: 26rem;
+  --wl-fade: 0.6s;
+  /* the safe areas come from index.html (--safe-*); these are the fallbacks so a page without them still works */
+  --wl-safe-top: var(--safe-top, 0px);
+  --wl-safe-right: var(--safe-right, 0px);
+  --wl-safe-bottom: var(--safe-bottom, 0px);
+  --wl-safe-left: var(--safe-left, 0px);
+}
+
+/* ---- the wish card ---- */
+.wl-card {
+  position: fixed;
+  left: calc(50% + (var(--wl-safe-left) - var(--wl-safe-right)) / 2);
+  top: calc(50% + (var(--wl-safe-top) - var(--wl-safe-bottom)) / 2);
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(calc((100vw - var(--wl-safe-left) - var(--wl-safe-right)) * 0.86), var(--wl-card-measure));
+  max-height: calc(100vh - var(--wl-safe-top) - var(--wl-safe-bottom) - 32px);
+  max-height: calc(100dvh - var(--wl-safe-top) - var(--wl-safe-bottom) - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.15rem 1.35rem;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--wl-card-edge) 55%, transparent);
+  background: color-mix(in srgb, var(--wl-card-bg) 90%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 28px rgba(156, 200, 255, 0.22);
+  color: var(--wl-card-text);
+  font-family: var(--wl-font-serif);
+  font-size: var(--wl-card-font);
+  line-height: 1.55;
+  text-align: center;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  pointer-events: auto;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  display: none;
+  opacity: 0;
+  z-index: 6;
+  transition: opacity var(--wl-fade) ease;
+}
+.wl-card:focus-visible { outline: 2px solid var(--wl-focus); outline-offset: 3px; }
+.wl-card-close { display: block; margin-top: 0.7rem; font-family: var(--wl-font-ui); font-size: 0.72em; letter-spacing: 0.04em; opacity: 0.7; }
+
+/* ---- the soft names under the constellations ---- */
+.wl-label {
+  position: absolute;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  font-family: var(--wl-font-serif);
+  font-size: clamp(14px, 3.9vw, 16px);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: var(--wl-label);
+  text-shadow: 0 0 8px rgba(120, 170, 255, 0.8), 0 0 2px rgba(10, 20, 40, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.4s ease;
+}
+
+/* ---- the letter reader ---- */
+.wl-letter {
+  position: fixed; inset: 0; z-index: 30;
+  background: color-mix(in srgb, var(--wl-letter-bg) 94%, transparent);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  opacity: 0; transition: opacity var(--wl-fade) ease;
+}
+.wl-letter[hidden] { display: none; }
+.wl-letter.wl-letter-in { opacity: 1; }
+.wl-letter-scroll {
+  position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  padding: calc(var(--wl-safe-top) + 4.2rem) calc(var(--wl-safe-right) + 1.4rem) calc(var(--wl-safe-bottom) + 3rem) calc(var(--wl-safe-left) + 1.4rem);
+}
+.wl-letter-scroll:focus-visible { outline: 1px solid color-mix(in srgb, var(--wl-focus) 55%, transparent); outline-offset: -6px; }
+.wl-letter-text {
+  max-width: 32em; margin: 0 auto;      /* about 32 to 40 characters a line at 18 to 20 px: easy on a phone */
+  font-family: var(--wl-font-serif); font-size: clamp(18px, 4.9vw, 20px); line-height: 1.7;
+  color: var(--wl-card-text); white-space: pre-wrap; overflow-wrap: anywhere; text-align: left;
+}
+.wl-letter-signoff {
+  max-width: 32em; margin: 2.6rem auto 0; padding-top: 1.4rem; border-top: 1px solid color-mix(in srgb, var(--wl-card-text) 22%, transparent);
+  font-family: var(--wl-font-serif); font-size: clamp(18px, 4.9vw, 20px); line-height: 1.6;
+  color: var(--wl-card-text); opacity: 0.86; white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.wl-letter-signoff p { margin: 0 0 0.4rem; }
+/* Phase 27 TEST stand-in for the envelope (the real picture waits for the owner's delivery choice): plain CSS, no words */
+.wl-envelope-stub {
+  position: fixed; left: 50%; bottom: calc(18% + var(--wl-safe-bottom)); width: 84px; height: 58px; margin-left: -42px; z-index: 12;
+  border: 0; border-radius: 6px; padding: 0; background: #e9dcc0; color: #7a5b3a; cursor: pointer; touch-action: manipulation;
+  box-shadow: 0 0 22px 6px rgba(255,200,120,.35); -webkit-tap-highlight-color: transparent;
+}
+.wl-envelope-stub::before { content: ''; position: absolute; inset: 0; clip-path: polygon(0 0, 50% 55%, 100% 0); background: #d6c4a2; border-radius: 6px 6px 0 0; }
+.wl-envelope-stub[hidden] { display: none; }
+.wl-envelope-stub:focus-visible { outline: 2px solid var(--wl-focus); outline-offset: 3px; }
+.wl-letter-close {
+  position: absolute; top: calc(10px + var(--wl-safe-top)); right: calc(10px + var(--wl-safe-right));
+  width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%;
+  color: var(--wl-button-fg); background: color-mix(in srgb, var(--wl-button-bg) 72%, transparent);
+  cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+}
+.wl-letter-close:focus-visible { outline: 2px solid var(--wl-focus); outline-offset: 2px; }
+
+/* ---- the sound button (built in src/audio/muteButton.ts; styled here so every control shares one look) ---- */
+.mute-button {
+  position: fixed; top: calc(10px + var(--wl-safe-top)); right: calc(10px + var(--wl-safe-right)); z-index: 20;
+  width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%;
+  color: var(--wl-button-fg); background: color-mix(in srgb, var(--wl-button-bg) 72%, transparent);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+}
+.mute-button:focus-visible { outline: 2px solid var(--wl-focus); outline-offset: 2px; }
+
+/* ---- the replay controls (src/ui/replayControls.ts): a small column under the sound button, same look ---- */
+.wl-replay {
+  position: fixed; top: calc(62px + var(--wl-safe-top)); right: calc(10px + var(--wl-safe-right)); z-index: 20;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.wl-replay[hidden], .wl-replay-btn[hidden] { display: none; }
+.wl-replay-btn {
+  width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%;
+  color: var(--wl-button-fg); background: color-mix(in srgb, var(--wl-button-bg) 72%, transparent);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+}
+.wl-replay-btn:focus-visible { outline: 2px solid var(--wl-focus); outline-offset: 2px; }
+.wl-replay-btn:active, .mute-button:active { background: color-mix(in srgb, var(--wl-button-bg) 90%, transparent); }
+
+/* ---- reduced motion: no fades anywhere in the UI layer (the card and names simply are or are not there) ---- */
+@media (prefers-reduced-motion: reduce) {
+  .wl-card, .wl-label, .wl-letter, .wl-replay-btn, .mute-button, .wl-hud p { transition: none !important; }
+}
+.wl-reduced .wl-card, .wl-reduced .wl-label, .wl-reduced.wl-letter { transition: none; }
+.wl-reduced.wl-letter { opacity: 1; }
+
+/* ---- very short screens (a phone turned sideways): the card scrolls instead of running off ---- */
+@media (max-height: 420px) {
+  .wl-card { padding: 0.8rem 1.1rem; line-height: 1.45; }
+}

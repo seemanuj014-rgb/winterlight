@@ -1,0 +1,52 @@
+{
+ "source": "chamgadad_ref_01_head_front.png",
+ "eyes": [
+  {
+   "side": "left",
+   "crop": {
+    "cx": 0.452777778,
+    "cy": 0.50462963,
+    "size": 0.222222222,
+    "px": 240
+   },
+   "body_px": 12277,
+   "body_centroid": [
+    0.45278,
+    0.50463
+   ],
+   "body_bbox": [
+    0.3963,
+    0.43519,
+    0.51389,
+    0.5713
+   ],
+   "white_px": 1581,
+   "tab_px": 647,
+   "brow_px": 631
+  },
+  {
+   "side": "right",
+   "crop": {
+    "cx": 0.610185185,
+    "cy": 0.537037037,
+    "size": 0.222222222,
+    "px": 240
+   },
+   "body_px": 13841,
+   "body_centroid": [
+    0.61019,
+    0.53704
+   ],
+   "body_bbox": [
+    0.55093,
+    0.46481,
+    0.66481,
+    0.60741
+   ],
+   "white_px": 1884,
+   "tab_px": 607,
+   "brow_px": 733
+  }
+ ],
+ "note": "Measured from pixels. No mouth is traced (Q1). No nose, lashes or blush exist in the drawing."
+}

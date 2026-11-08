@@ -1,0 +1,19 @@
+[
+ {
+  "t": 3.02,
+  "type": "bunnyStartle"
+ },
+ {
+  "t": 3.02,
+  "type": "bunnyHide"
+ },
+ {
+  "t": 3.02,
+  "type": "chamLean",
+  "detail": "bunny"
+ },
+ {
+  "t": 3.02,
+  "type": "chamEar"
+ }
+]

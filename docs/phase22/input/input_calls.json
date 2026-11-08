@@ -1,0 +1,17 @@
+[
+ {
+  "check": "draw calls with all five shapes finished, at tier low (backdrop + five shapes), budget 60",
+  "ok": true,
+  "detail": "18"
+ },
+ {
+  "check": "the five shapes report their own cost (about 2 each)",
+  "ok": true,
+  "detail": "10"
+ },
+ {
+  "check": "calls: no console errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

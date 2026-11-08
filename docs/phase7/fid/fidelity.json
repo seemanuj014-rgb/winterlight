@@ -1,0 +1,21 @@
+{
+ "source": "screenshot: ref.png",
+ "regions": {
+  "headAndEars": {
+   "iou": 0.9777,
+   "target": 0.97,
+   "pass": true
+  },
+  "neckAndChest": {
+   "iou": 0.9934,
+   "target": 0.95,
+   "pass": true
+  }
+ },
+ "pixels": {
+  "figure": 377598,
+  "truth": 376606,
+  "only_render": 3964,
+  "only_drawing": 2972
+ }
+}

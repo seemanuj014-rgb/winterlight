@@ -1,0 +1,12 @@
+[
+ {
+  "check": "draw calls in the cake view at tier low (backdrop + ground + cake), budget 60",
+  "ok": true,
+  "detail": "15"
+ },
+ {
+  "check": "calls: no console errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

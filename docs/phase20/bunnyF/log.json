@@ -1,0 +1,33 @@
+[
+ {
+  "t": 3.02,
+  "type": "bunnyStartle"
+ },
+ {
+  "t": 3.02,
+  "type": "bunnyHop",
+  "detail": "flee"
+ },
+ {
+  "t": 3.02,
+  "type": "chamLean",
+  "detail": "bunny"
+ },
+ {
+  "t": 3.02,
+  "type": "chamEar"
+ },
+ {
+  "t": 5.43,
+  "type": "bunnyHop",
+  "detail": "flee"
+ },
+ {
+  "t": 7.45,
+  "type": "bunnyHide"
+ },
+ {
+  "t": 12.47,
+  "type": "bunnyPeek"
+ }
+]

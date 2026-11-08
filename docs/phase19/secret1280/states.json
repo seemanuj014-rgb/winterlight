@@ -1,0 +1,37 @@
+{
+ "query": "debug",
+ "size": [
+  1280,
+  720
+ ],
+ "frames": [
+  {
+   "at": 10.0,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0,
+    "lamp": 0.55,
+    "hint": 1,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookWide",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 34.0,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0,
+    "lamp": 0.38,
+    "hint": 1,
+    "line": 1,
+    "deep": 1,
+    "shot": "nookSleep",
+    "location": "nook"
+   }
+  }
+ ]
+}

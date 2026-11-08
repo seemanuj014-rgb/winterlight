@@ -1,0 +1,22 @@
+[
+ {
+  "check": "draw calls in the sky view at tier low (backdrop + constellation), budget 60",
+  "pass": true,
+  "detail": "11"
+ },
+ {
+  "check": "the constellation adds at most 4 draw calls to the same backdrop",
+  "pass": true,
+  "detail": "stars view 11 vs ?world backdrop alone 12 (the ?world view also draws the ground, so this is a loose bound)"
+ },
+ {
+  "check": "the engine reports its own cost",
+  "pass": true,
+  "detail": "2"
+ },
+ {
+  "check": "calls: no console errors",
+  "pass": true,
+  "detail": "[]"
+ }
+]

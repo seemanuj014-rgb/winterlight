@@ -1,0 +1,27 @@
+[
+ {
+  "check": "it reaches the candle moment",
+  "ok": true,
+  "detail": "ready"
+ },
+ {
+  "check": "a click on a candle puts it out",
+  "ok": true,
+  "detail": "4"
+ },
+ {
+  "check": "a click on the cake puts out the next lit one",
+  "ok": true,
+  "detail": "3"
+ },
+ {
+  "check": "a click in the dark does nothing",
+  "ok": true,
+  "detail": "3"
+ },
+ {
+  "check": "mouse: no console errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

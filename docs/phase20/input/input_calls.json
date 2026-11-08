@@ -1,0 +1,22 @@
+[
+ {
+  "check": "draw calls in the nook (cat view) at low tier are unchanged (at most 57, budget 60)",
+  "pass": true,
+  "detail": "53"
+ },
+ {
+  "check": "the nook (cat view): no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "draw calls in outside (bunny view) at low tier are unchanged (at most 58, budget 60)",
+  "pass": true,
+  "detail": "54"
+ },
+ {
+  "check": "outside (bunny view): no console errors",
+  "pass": true,
+  "detail": "[]"
+ }
+]

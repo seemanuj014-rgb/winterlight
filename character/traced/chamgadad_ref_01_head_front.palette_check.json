@@ -1,0 +1,159 @@
+{
+ "source": "chamgadad_ref_01_head_front.png",
+ "tolerance_per_channel": 12,
+ "colors": {
+  "body_base": {
+   "patch": [
+    560,
+    700
+   ],
+   "note": "flat cheek fill",
+   "measured": "#a6b8c2",
+   "stored": "#a7b9c3",
+   "diff_rgb": [
+    -1,
+    -1,
+    -1
+   ],
+   "within_tol": true
+  },
+  "body_chest": {
+   "patch": [
+    560,
+    1010
+   ],
+   "note": "flat chest fill",
+   "measured": "#a8bac4",
+   "stored": "#a8bac2",
+   "diff_rgb": [
+    0,
+    0,
+    2
+   ],
+   "within_tol": true
+  },
+  "ear_front_pale_blue": {
+   "patch": [
+    505,
+    300
+   ],
+   "note": "upright ear, inner, away from the lavender patch",
+   "measured": "#cddfe9",
+   "stored": "#c4d6e1",
+   "diff_rgb": [
+    9,
+    9,
+    8
+   ],
+   "within_tol": true
+  },
+  "ear_inner_lavender": {
+   "patch": [
+    555,
+    300
+   ],
+   "note": "upright ear, lavender-grey patch",
+   "measured": "#86879b",
+   "stored": "#87889c",
+   "diff_rgb": [
+    -1,
+    -1,
+    -1
+   ],
+   "within_tol": true
+  },
+  "ear_right_pale_blue": {
+   "patch": [
+    905,
+    515
+   ],
+   "note": "angled ear, inner pale blue",
+   "measured": "#cddfe9",
+   "stored": "#c1d1dc",
+   "diff_rgb": [
+    12,
+    14,
+    13
+   ],
+   "within_tol": false
+  },
+  "ear_back_shadow_teal": {
+   "patch": [
+    800,
+    430
+   ],
+   "note": "angled ear, darker teal-grey back",
+   "measured": "#6f8189",
+   "stored": "#6f8188",
+   "diff_rgb": [
+    0,
+    0,
+    1
+   ],
+   "within_tol": true
+  },
+  "eye_black": {
+   "patch": [
+    520,
+    580
+   ],
+   "note": "left eye, dark area",
+   "measured": "#03060a",
+   "stored": "#09080a",
+   "diff_rgb": [
+    -6,
+    -2,
+    0
+   ],
+   "within_tol": true
+  },
+  "eye_highlight_white": {
+   "patch": [
+    452,
+    538
+   ],
+   "note": "left eye, white rounded-triangle highlight",
+   "measured": "#f2f3f5",
+   "stored": "#f7f8fa",
+   "diff_rgb": [
+    -5,
+    -5,
+    -5
+   ],
+   "within_tol": true
+  },
+  "eye_lower_pale_blue_tab": {
+   "patch": [
+    460,
+    598
+   ],
+   "note": "left eye, pale-blue tab at the bottom",
+   "measured": "#c0d2dc",
+   "stored": "#c0d2dc",
+   "diff_rgb": [
+    0,
+    0,
+    0
+   ],
+   "within_tol": true
+  },
+  "rim_light_warm_edge_measured": {
+   "stored": "#d7d9d5",
+   "rows": [
+    {
+     "row": 650,
+     "band_median": "#e6e6dd",
+     "lightest": "#eeeee2",
+     "pixels": 16
+    },
+    {
+     "row": 700,
+     "band_median": "#d9ded5",
+     "lightest": "#dddfda",
+     "pixels": 19
+    }
+   ],
+   "note": "informational: the stored rim is a median over a patch; the band itself is lighter at its peak"
+  }
+ }
+}

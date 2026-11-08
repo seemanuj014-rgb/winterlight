@@ -1,0 +1,102 @@
+[
+ {
+  "check": "breath: it reaches the candle moment",
+  "ok": true,
+  "detail": "ready"
+ },
+ {
+  "check": "breath: the microphone was granted and is listening during the candle moment",
+  "ok": true,
+  "detail": "{\"phase\": \"ready\", \"lit\": 5, \"mic\": \"granted\", \"micListening\": true, \"focus\": null, \"done\": false, \"reading\": {\"breathy\": false, \"blowing\": false, \"strength\": 0, \"effort\": 0, \"floor\": 0.0015465787339929262, \"calibrating\": true}}"
+ },
+ {
+  "check": "breath: all five flames go out by breath alone (no tap was made)",
+  "ok": true,
+  "detail": "lit 0"
+ },
+ {
+  "check": "breath: then the act is done (once)",
+  "ok": true,
+  "detail": "{\"phase\": \"done\", \"lit\": 0, \"mic\": \"granted\", \"micListening\": false, \"focus\": null, \"done\": true, \"reading\": null}"
+ },
+ {
+  "check": "breath: act:enter once, cake:wish on then off, candle:out five times, act:done once",
+  "ok": true,
+  "detail": "[\"act:enter\", \"cake:wish\", \"cake:wish\", \"candle:out\", \"candle:out\", \"candle:out\", \"candle:out\", \"candle:out\", \"act:done\"]"
+ },
+ {
+  "check": "breath: the hush is on first and off second",
+  "ok": true,
+  "detail": "[true, false]"
+ },
+ {
+  "check": "breath: the flames go out one by one (left 4,3,2,1,0)",
+  "ok": true,
+  "detail": "[4, 3, 2, 1, 0]"
+ },
+ {
+  "check": "breath: every candle went out by 'blow', none by tap",
+  "ok": true,
+  "detail": "[\"blow\"]"
+ },
+ {
+  "check": "breath: the microphone is closed once the moment is over",
+  "ok": true,
+  "detail": "{\"phase\": \"done\", \"lit\": 0, \"mic\": \"granted\", \"micListening\": false, \"focus\": null, \"done\": true, \"reading\": null}"
+ },
+ {
+  "check": "breath: no console errors",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "check": "speech: it reaches the candle moment",
+  "ok": true,
+  "detail": "ready"
+ },
+ {
+  "check": "speech: the microphone was granted and is listening during the candle moment",
+  "ok": true,
+  "detail": "{\"phase\": \"ready\", \"lit\": 5, \"mic\": \"granted\", \"micListening\": true, \"focus\": null, \"done\": false, \"reading\": {\"breathy\": false, \"blowing\": false, \"strength\": 0, \"effort\": 0, \"floor\": 0.0015787527196818518, \"calibrating\": true}}"
+ },
+ {
+  "check": "speech: nothing went out over 25 s of the card's clock (several loops of the file)",
+  "ok": true,
+  "detail": "lit 5 phase ready"
+ },
+ {
+  "check": "speech: the microphone was still listening (it was really hearing the file)",
+  "ok": true,
+  "detail": "{\"phase\": \"ready\", \"lit\": 5, \"mic\": \"granted\", \"micListening\": true, \"focus\": null, \"done\": false, \"reading\": {\"breathy\": false, \"blowing\": false, \"strength\": 0, \"effort\": 0, \"floor\": 0.0015637247368339804, \"calibrating\": false}}"
+ },
+ {
+  "check": "speech: no console errors",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "check": "silence: it reaches the candle moment",
+  "ok": true,
+  "detail": "ready"
+ },
+ {
+  "check": "silence: the microphone was granted and is listening during the candle moment",
+  "ok": true,
+  "detail": "{\"phase\": \"ready\", \"lit\": 5, \"mic\": \"granted\", \"micListening\": true, \"focus\": null, \"done\": false, \"reading\": {\"breathy\": false, \"blowing\": false, \"strength\": 0, \"effort\": 0, \"floor\": 0.001574947105772981, \"calibrating\": true}}"
+ },
+ {
+  "check": "silence: nothing went out over 25 s of the card's clock (several loops of the file)",
+  "ok": true,
+  "detail": "lit 5 phase ready"
+ },
+ {
+  "check": "silence: the microphone was still listening (it was really hearing the file)",
+  "ok": true,
+  "detail": "{\"phase\": \"ready\", \"lit\": 5, \"mic\": \"granted\", \"micListening\": true, \"focus\": null, \"done\": false, \"reading\": {\"breathy\": false, \"blowing\": false, \"strength\": 0, \"effort\": 0, \"floor\": 0.001564281111400078, \"calibrating\": false}}"
+ },
+ {
+  "check": "silence: no console errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

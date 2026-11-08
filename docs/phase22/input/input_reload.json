@@ -1,0 +1,42 @@
+[
+ {
+  "check": "finished by taps",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "saved in localStorage",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "after a reload the shape is still finished",
+  "ok": true,
+  "detail": "[\"kaaju-katli\"]"
+ },
+ {
+  "check": "...drawn complete, with its name there",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "...and no wish card and no burst on a restore",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "check": "...the other four are not done",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "tapping the restored shape shows its wish again",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reload: no console errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

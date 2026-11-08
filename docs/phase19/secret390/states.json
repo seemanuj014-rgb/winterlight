@@ -1,0 +1,65 @@
+{
+ "query": "debug",
+ "size": [
+  390,
+  780
+ ],
+ "frames": [
+  {
+   "at": 10.0,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0,
+    "lamp": 0.55,
+    "hint": 1,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookWide",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 22.0,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0,
+    "lamp": 0.501,
+    "hint": 1,
+    "line": 0,
+    "deep": 0.29,
+    "shot": "nookSleep",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 26.0,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0,
+    "lamp": 0.404,
+    "hint": 1,
+    "line": 0.96,
+    "deep": 0.86,
+    "shot": "nookSleep",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 34.0,
+   "state": {
+    "act": 1,
+    "phase": "asleep",
+    "progress": 0,
+    "lamp": 0.38,
+    "hint": 1,
+    "line": 1,
+    "deep": 1,
+    "shot": "nookSleep",
+    "location": "nook"
+   }
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+[
+ {
+  "check": "8 s of nothing: a line is named to glow",
+  "pass": true,
+  "detail": "{\"from\": \"b\", \"to\": \"c\", \"edge\": 1}"
+ },
+ {
+  "check": "a touch ends the hint",
+  "pass": true,
+  "detail": "null"
+ }
+]

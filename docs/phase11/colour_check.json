@@ -1,0 +1,92 @@
+{
+ "body_base": {
+  "drawing": "#a6b8c2",
+  "render": "#9cb1c0",
+  "diff": [
+   -10,
+   -7,
+   -2
+  ],
+  "max_abs": 10
+ },
+ "body_chest": {
+  "drawing": "#a8bac4",
+  "render": "#a7b9c3",
+  "diff": [
+   -1,
+   -1,
+   -1
+  ],
+  "max_abs": 1
+ },
+ "ear_front_pale_blue": {
+  "drawing": "#cddfe9",
+  "render": "#c4d6e1",
+  "diff": [
+   -9,
+   -9,
+   -8
+  ],
+  "max_abs": 9
+ },
+ "ear_inner_lavender": {
+  "drawing": "#86879b",
+  "render": "#87889c",
+  "diff": [
+   1,
+   1,
+   1
+  ],
+  "max_abs": 1
+ },
+ "ear_right_pale_blue": {
+  "drawing": "#cddfe9",
+  "render": "#c1d1dc",
+  "diff": [
+   -12,
+   -14,
+   -13
+  ],
+  "max_abs": 14
+ },
+ "ear_back_shadow_teal": {
+  "drawing": "#6f8189",
+  "render": "#6f8188",
+  "diff": [
+   0,
+   0,
+   -1
+  ],
+  "max_abs": 1
+ },
+ "eye_black": {
+  "drawing": "#03060a",
+  "render": "#09080a",
+  "diff": [
+   6,
+   2,
+   0
+  ],
+  "max_abs": 6
+ },
+ "eye_highlight_white": {
+  "drawing": "#f2f3f5",
+  "render": "#f7f8fa",
+  "diff": [
+   5,
+   5,
+   5
+  ],
+  "max_abs": 5
+ },
+ "eye_lower_pale_blue_tab": {
+  "drawing": "#c0d2dc",
+  "render": "#c0d2dc",
+  "diff": [
+   0,
+   0,
+   0
+  ],
+  "max_abs": 0
+ }
+}

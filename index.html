@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0d1b2e" />
+    <title>Something for you</title>
+    <meta name="description" content="A little something, made for you." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Something for you" />
+    <meta property="og:description" content="A little something, made for you." />
+    <meta property="og:image" content="__SITE_URL__/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Something for you" />
+    <meta name="twitter:description" content="A little something, made for you." />
+    <meta name="twitter:image" content="__SITE_URL__/og.png" />
+    <style>
+      :root { --safe-top: env(safe-area-inset-top, 0px); --safe-right: env(safe-area-inset-right, 0px);
+              --safe-bottom: env(safe-area-inset-bottom, 0px); --safe-left: env(safe-area-inset-left, 0px); }
+      html, body { touch-action: manipulation; -webkit-text-size-adjust: 100%; margin: 0; height: 100%; height: 100dvh; background: #0d1b2e; overflow: hidden; overscroll-behavior: none; }
+      canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+      #boot { position: fixed; inset: 0; display: grid; place-items: center; color: #cfe3f2;
+              font: 15px/1.5 system-ui, sans-serif; letter-spacing: .04em; pointer-events: none; }
+
+      /* Phase 17: the loading screen. It is part of the page, so it shows while the script is still downloading; src/ui/boot.ts takes it over. */
+      #splash { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; background: #0d1b2e; color: #cfe3f2;
+                font: 15px/1.5 system-ui, sans-serif; letter-spacing: .04em; text-align: center; }
+      #splash[hidden] { display: none; }
+      .splash-snow { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+      .splash-snow i { position: absolute; top: -8vh; border-radius: 50%; background: #e8f1f8; will-change: transform;
+                       animation: splash-fall var(--d) linear var(--w) infinite; left: var(--x); width: var(--s); height: var(--s); opacity: var(--o); }
+      @keyframes splash-fall { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(var(--k), 116vh, 0); } }
+      .splash-card { position: relative; width: min(78vw, 320px); padding: 0 0 var(--safe-bottom); }
+      .splash-bar { height: 3px; border-radius: 2px; background: rgba(207, 227, 242, .16); overflow: hidden; margin: 0 auto 18px; width: min(56vw, 220px); }
+      .splash-bar[hidden] { display: none; }
+      #splash-fill { display: block; height: 100%; background: #ffd9a0; transform-origin: 0 50%; transform: scaleX(0); transition: transform .45s ease-out;
+                     animation: splash-creep 30s cubic-bezier(.1, .6, .3, 1) forwards; }
+      @keyframes splash-creep { to { transform: scaleX(.3); } }
+      #splash-title { margin: 0 0 8px; font-size: 18px; font-weight: 600; letter-spacing: .02em; }
+      #splash-msg { margin: 0; min-height: 1.5em; opacity: .85; }
+      #splash-reload { margin-top: 18px; font: inherit; color: #0d1b2e; background: #cfe3f2; border: 0; border-radius: 999px; padding: 9px 22px; }
+      #splash-reload[hidden], #splash-title[hidden] { display: none; }
+      @media (prefers-reduced-motion: reduce) { .splash-snow i { animation: none; top: var(--y); } #splash-fill { animation: none; transform: scaleX(.12); } }
+    </style>
+  </head>
+  <body>
+    <canvas id="stage"></canvas>
+    <div id="boot">Phase 0 starter. If you can read this, the project runs.</div>
+    <div id="splash" role="status" aria-live="polite">
+      <div class="splash-snow" aria-hidden="true"></div>
+      <div class="splash-card">
+        <div class="splash-bar"><i id="splash-fill"></i></div>
+        <h1 id="splash-title" hidden></h1>
+        <p id="splash-msg">Getting things ready</p>
+        <button id="splash-reload" type="button" hidden>Reload</button>
+      </div>
+    </div>
+    <noscript><style>#splash-fill { animation: none; } .splash-snow { display: none; }</style><p style="position:fixed;inset:0;z-index:11;display:grid;place-items:center;margin:0;background:#0d1b2e;color:#cfe3f2;font:15px/1.5 system-ui,sans-serif;text-align:center;padding:0 24px">This needs JavaScript. Please turn it on and reload.</p></noscript>
+    <script>
+      /* Phase 17: before any app script has arrived. Falling snow, WebGL check, and plain-words failure messages. Same sentences as src/ui/bootText.ts (a test keeps them in step). */
+      (function () {
+        var d = document, w = window, T = {
+          slow: 'Still loading. Your connection is a little slow, that is all.',
+          stuck: 'This is taking longer than it should. You can keep waiting, or reload.',
+          noWebglTitle: 'This needs WebGL',
+          noWebglBody: 'Your browser cannot draw 3D right now. Try this link in a recent Chrome, Safari or Firefox, and make sure hardware acceleration is turned on.',
+          scriptFailTitle: 'It did not load',
+          scriptFailBody: 'Something got stuck on the way. Check your connection, then reload the page.'
+        };
+        var S = (w.__splash = { adopted: false, done: false, failed: false });
+        var snow = d.querySelector('.splash-snow'), seed = 7;
+        function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+        for (var i = 0; i < 30; i++) {
+          var f = d.createElement('i'), sz = 2 + rnd() * 3.2;
+          f.style.cssText = '--x:' + (rnd() * 100).toFixed(1) + '%;--y:' + (rnd() * 100).toFixed(1) + 'vh;--s:' + sz.toFixed(1) + 'px;--o:' + (0.35 + rnd() * 0.55).toFixed(2) +
+            ';--d:' + (9 + rnd() * 9).toFixed(1) + 's;--w:-' + (rnd() * 18).toFixed(1) + 's;--k:' + ((rnd() - 0.5) * 14).toFixed(1) + 'vw';
+          snow.appendChild(f);
+        }
+        function el(id) { return d.getElementById(id); }
+        function fail(title, body) {
+          if (S.failed || S.done) return;
+          S.failed = true;
+          el('splash-title').textContent = title; el('splash-title').hidden = false;
+          el('splash-msg').textContent = body;
+          el('splash-reload').hidden = false;
+          el('splash').hidden = false; el('splash').style.display = ''; el('splash').style.opacity = '1';
+          el('splash-fill').parentNode.hidden = true;
+        }
+        el('splash-reload').addEventListener('click', function () { w.location.reload(); });
+        try {
+          var c = d.createElement('canvas');
+          if (!(c.getContext('webgl2') || c.getContext('webgl') || c.getContext('experimental-webgl'))) fail(T.noWebglTitle, T.noWebglBody);
+        } catch (e) { fail(T.noWebglTitle, T.noWebglBody); }
+        // a script that did not arrive or threw before the app took over
+        w.addEventListener('error', function () { if (!S.done) fail(T.scriptFailTitle, T.scriptFailBody); }, true);
+        w.addEventListener('unhandledrejection', function () { if (!S.done && !S.adopted) fail(T.scriptFailTitle, T.scriptFailBody); });
+        // slow download: say so kindly, and later offer a reload (the app takes over these messages once it has arrived)
+        setTimeout(function () { if (!S.adopted && !S.failed) el('splash-msg').textContent = T.slow; }, 10000);
+        setTimeout(function () { if (!S.adopted && !S.failed) { el('splash-msg').textContent = T.stuck; el('splash-reload').hidden = false; } }, 30000);
+      })();
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

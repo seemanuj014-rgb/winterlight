@@ -1,0 +1,207 @@
+[
+ {
+  "check": "balls are on screen",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "tiny ball is small (under the 28 px finger radius)",
+  "ok": true,
+  "detail": "radius 14.2px"
+ },
+ {
+  "check": "touch tap = press, tap",
+  "ok": true,
+  "detail": "['press', 'tap']['big']"
+ },
+ {
+  "check": "tap 22 px beside the tiny ball still hits it",
+  "ok": true,
+  "detail": "['tiny']"
+ },
+ {
+  "check": "tap 90 px away hits nothing",
+  "ok": true,
+  "detail": "[None]"
+ },
+ {
+  "check": "speck (priority) wins over the big ball under it",
+  "ok": true,
+  "detail": "['speck']"
+ },
+ {
+  "check": "touch hold = press, holdstart (while down), holdend",
+  "ok": true,
+  "detail": "['press', 'holdstart', 'holdend']"
+ },
+ {
+  "check": "a hold asked the phone to buzz (navigator.vibrate called)",
+  "ok": true,
+  "detail": "[[12], [12], [12], [12], [10, 40, 14]]"
+ },
+ {
+  "check": "touch drag = press, dragstart, dragend on mid",
+  "ok": true,
+  "detail": "['press', 'dragstart', 'dragend']"
+ },
+ {
+  "check": "the dragged ball moved left and down",
+  "ok": true,
+  "detail": "285,353 -> 205,413"
+ },
+ {
+  "check": "two fingers = press, cancel (multi), no tap",
+  "ok": true,
+  "detail": "['press', 'cancel']"
+ },
+ {
+  "check": "a tap after the pinch works again",
+  "ok": true,
+  "detail": "['press', 'tap']"
+ },
+ {
+  "check": "touchcancel = press, cancel",
+  "ok": true,
+  "detail": "['press', 'cancel']"
+ },
+ {
+  "check": "mouse click = press, tap (kind mouse)",
+  "ok": true,
+  "detail": "['press', 'tap']"
+ },
+ {
+  "check": "mouse drag = press, dragstart, dragend",
+  "ok": true,
+  "detail": "['press', 'dragstart', 'dragend']"
+ },
+ {
+  "check": "right click makes no gesture",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "check": "Tab moves the focus ring along the balls",
+  "ok": true,
+  "detail": "['big', 'mid']"
+ },
+ {
+  "check": "Enter = press, tap on the focused ball",
+  "ok": true,
+  "detail": "['press', 'tap']"
+ },
+ {
+  "check": "Space = press, tap",
+  "ok": true,
+  "detail": "['press', 'tap']"
+ },
+ {
+  "check": "held Enter = hold",
+  "ok": true,
+  "detail": "['press', 'holdstart', 'holdend']"
+ },
+ {
+  "check": "Enter + arrows = drag",
+  "ok": true,
+  "detail": "['press', 'dragstart', 'dragend']"
+ },
+ {
+  "check": "Escape while held = cancel",
+  "ok": true,
+  "detail": "['press', 'cancel']"
+ },
+ {
+  "check": "Tab runs out of balls and focus leaves the canvas (not trapped)",
+  "ok": true,
+  "detail": "active element: BUTTON"
+ },
+ {
+  "check": "losing focus during a hold ends it (holdend, reset)",
+  "ok": true,
+  "detail": "['press', 'holdstart', 'holdend']"
+ },
+ {
+  "check": "canvas has touch-action none",
+  "ok": true,
+  "detail": "none"
+ },
+ {
+  "check": "context menu is prevented",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no console errors",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "check": "no sensor: needs-permission, then after a tap and 2 s with no reading it settles on 'unsupported' (not stuck 'waiting')",
+  "ok": true,
+  "detail": "needs-permission -> unsupported"
+ },
+ {
+  "check": "with readings: state becomes 'on'",
+  "ok": true,
+  "detail": "on -> on"
+ },
+ {
+  "check": "a tilt of 12 degrees to one side gives a parallax on x only (sign is UNPROVEN on a real phone)",
+  "ok": true,
+  "detail": "{'x': 0.7844319959082566, 'y': 0}"
+ },
+ {
+  "check": "tilting the other way flips the sign",
+  "ok": true,
+  "detail": "0.78 then -0.87"
+ },
+ {
+  "check": "iOS stub: starts needs-permission and does not ask until tapped (granted)",
+  "ok": true,
+  "detail": "needs-permission, asked 0"
+ },
+ {
+  "check": "iOS stub: after a tap it asks once; answer granted -> waiting or on",
+  "ok": true,
+  "detail": "waiting, asked 1"
+ },
+ {
+  "check": "iOS stub: no page errors (granted)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "check": "iOS stub: starts needs-permission and does not ask until tapped (denied)",
+  "ok": true,
+  "detail": "needs-permission, asked 0"
+ },
+ {
+  "check": "iOS stub: after a tap it asks once; answer denied -> denied or on",
+  "ok": true,
+  "detail": "denied, asked 1"
+ },
+ {
+  "check": "iOS stub: no page errors (denied)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "check": "the buzz button calls navigator.vibrate with a short pattern",
+  "ok": true,
+  "detail": "[[12]]"
+ },
+ {
+  "check": "a storm of 30 clicks cannot buzz more than the limiter allows",
+  "ok": true,
+  "detail": "16 buzzes, 192 ms"
+ },
+ {
+  "check": "reduced motion: mouse parallax is exactly 0",
+  "ok": true,
+  "detail": "{'x': 0, 'y': 0}"
+ },
+ {
+  "check": "desktop: the mouse gives a small parallax (non-zero, at most 0.35)",
+  "ok": true,
+  "detail": "{'x': 0.30624999999999997, 'y': 0.25277777777777777}"
+ }
+]

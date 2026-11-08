@@ -1,0 +1,102 @@
+[
+ {
+  "file": "music_box.wav",
+  "seconds": 21.5,
+  "rate": 24000,
+  "gain": 0.2,
+  "peak": 0.2958,
+  "peakDb": -10.58,
+  "wavPeak": 0.2958,
+  "rmsDb": -25.5
+ },
+ {
+  "file": "completion.wav",
+  "seconds": 4.0,
+  "rate": 24000,
+  "gain": 0.2,
+  "peak": 0.3357,
+  "peakDb": -9.48,
+  "wavPeak": 0.3357,
+  "rmsDb": -26.5
+ },
+ {
+  "file": "chimes.wav",
+  "seconds": 17.0,
+  "rate": 24000,
+  "gain": 0.2,
+  "peak": 0.2479,
+  "peakDb": -12.12,
+  "wavPeak": 0.2479,
+  "rmsDb": -25.3
+ },
+ {
+  "file": "steps.wav",
+  "seconds": 4.5,
+  "rate": 24000,
+  "gain": 0.2,
+  "peak": 0.0322,
+  "peakDb": -29.85,
+  "wavPeak": 0.0322,
+  "rmsDb": -55.4
+ },
+ {
+  "file": "puff.wav",
+  "seconds": 8.0,
+  "rate": 24000,
+  "gain": 0.2,
+  "peak": 0.0441,
+  "peakDb": -27.1,
+  "wavPeak": 0.0441,
+  "rmsDb": -42.1
+ },
+ {
+  "file": "release.wav",
+  "seconds": 12.0,
+  "rate": 24000,
+  "gain": 0.2,
+  "peak": 0.2392,
+  "peakDb": -12.43,
+  "wavPeak": 0.2392,
+  "rmsDb": -28.3
+ },
+ {
+  "file": "purr.wav",
+  "seconds": 8.0,
+  "rate": 24000,
+  "gain": 0.2,
+  "peak": 0.0345,
+  "peakDb": -29.24,
+  "wavPeak": 0.0345,
+  "rmsDb": -39.9
+ },
+ {
+  "file": "beds.wav",
+  "seconds": 16.0,
+  "rate": 24000,
+  "gain": 0.2,
+  "peak": 0.0604,
+  "peakDb": -24.37,
+  "wavPeak": 0.0604,
+  "rmsDb": -36.9
+ },
+ {
+  "file": "demo.wav",
+  "seconds": 54.2,
+  "rate": 24000,
+  "gain": 0.2,
+  "peak": 0.3272,
+  "peakDb": -9.7,
+  "wavPeak": 0.3271,
+  "rmsDb": -28.0
+ },
+ {
+  "file": "demo_max.wav",
+  "seconds": 54.2,
+  "rate": 24000,
+  "gain": 0.6,
+  "peak": 0.5911,
+  "peakDb": -4.57,
+  "wavPeak": 0.5911,
+  "rmsDb": -19.8
+ }
+]

@@ -1,0 +1,102 @@
+[
+ {
+  "check": "touch hold: the light starts to rise",
+  "pass": true,
+  "detail": "{\"act\": 1, \"phase\": \"asleep\", \"progress\": 0.207, \"lamp\": 0.592, \"hint\": 0, \"line\": 0, \"deep\": 0, \"shot\": \"nookWide\", \"location\": \"nook\"}"
+ },
+ {
+  "check": "touch hold: she wakes while the finger is down",
+  "pass": true,
+  "detail": "{\"act\": 1, \"phase\": \"waking\", \"progress\": 1, \"lamp\": 1, \"hint\": 0, \"line\": 0, \"deep\": 0, \"shot\": \"nookBed\", \"location\": \"nook\"}"
+ },
+ {
+  "check": "touch hold: she goes on to notice the finger",
+  "pass": true,
+  "detail": "{\"act\": 1, \"phase\": \"noticing\", \"progress\": 1, \"lamp\": 1, \"hint\": 0, \"line\": 0, \"deep\": 0, \"shot\": \"nookBed\", \"location\": \"nook\"}"
+ },
+ {
+  "check": "touch hold: log shows start, press, wake, noticing in order",
+  "pass": true,
+  "detail": "['start', 'press', 'wake', 'noticing']"
+ },
+ {
+  "check": "touch hold: haptics were asked for",
+  "pass": true,
+  "detail": "[[10, 40, 14], [24, 70, 18]]"
+ },
+ {
+  "check": "touch hold: the progress is remembered as a secret-free run (no secret)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "check": "touch hold: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "touch taps: she wakes after a handful of taps (each adds 0.17, six should do it; the light also sinks between taps)",
+  "pass": true,
+  "detail": "taps sent 6; {\"act\": 1, \"phase\": \"waking\", \"progress\": 1, \"lamp\": 1, \"hint\": 0, \"line\": 0, \"deep\": 0, \"shot\": \"nookBed\", \"location\": \"nook\"}"
+ },
+ {
+  "check": "touch taps: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "keyboard: Tab puts the focus ring on her",
+  "pass": true,
+  "detail": "{'display': 'block', 'left': '135.004px', 'top': '300.558px', 'w': '171.916px'}"
+ },
+ {
+  "check": "keyboard: holding Space raises the light",
+  "pass": true,
+  "detail": "{\"act\": 1, \"phase\": \"asleep\", \"progress\": 0.247, \"lamp\": 0.604, \"hint\": 0.15, \"line\": 0, \"deep\": 0, \"shot\": \"nookWide\", \"location\": \"nook\"}"
+ },
+ {
+  "check": "keyboard: she wakes",
+  "pass": true,
+  "detail": "{\"act\": 1, \"phase\": \"waking\", \"progress\": 1, \"lamp\": 1, \"hint\": 0, \"line\": 0, \"deep\": 0, \"shot\": \"nookBed\", \"location\": \"nook\"}"
+ },
+ {
+  "check": "keyboard: log shows press then wake",
+  "pass": true,
+  "detail": "['start', 'press', 'wake']"
+ },
+ {
+  "check": "keyboard: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "keyboard Enter: she wakes",
+  "pass": true,
+  "detail": "{\"act\": 1, \"phase\": \"waking\", \"progress\": 1, \"lamp\": 1, \"hint\": 0, \"line\": 0, \"deep\": 0, \"shot\": \"nookBed\", \"location\": \"nook\"}"
+ },
+ {
+  "check": "mouse hold: she wakes",
+  "pass": true,
+  "detail": "{\"act\": 1, \"phase\": \"waking\", \"progress\": 1, \"lamp\": 1, \"hint\": 0, \"line\": 0, \"deep\": 0, \"shot\": \"nookWide\", \"location\": \"nook\"}"
+ },
+ {
+  "check": "mouse hold: no console errors",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "check": "one tap does not wake her",
+  "pass": true,
+  "detail": "{\"act\": 1, \"phase\": \"asleep\", \"progress\": 0.187, \"lamp\": 0.606, \"hint\": 0, \"line\": 0, \"deep\": 0, \"shot\": \"nookWide\", \"location\": \"nook\"}"
+ },
+ {
+  "check": "draw calls in the nook at low tier are under 60",
+  "pass": true,
+  "detail": "57"
+ },
+ {
+  "check": "draw calls outside (after the push-out) at low tier are under 60",
+  "pass": true,
+  "detail": "58 at {\"act\": 2, \"phase\": \"pushOut\", \"door\": 1, \"shot\": \"doorOut\", \"shotElapsed\": 2.45, \"location\": \"outside\"}"
+ }
+]

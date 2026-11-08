@@ -1,0 +1,47 @@
+[
+ {
+  "check": "it reaches the candle moment",
+  "ok": true,
+  "detail": "ready"
+ },
+ {
+  "check": "Tab puts the focus on the cake",
+  "ok": true,
+  "detail": "{\"phase\": \"ready\", \"lit\": 5, \"mic\": \"denied\", \"micListening\": false, \"focus\": \"cake\", \"done\": false, \"reading\": null}"
+ },
+ {
+  "check": "Enter puts out the next lit candle",
+  "ok": true,
+  "detail": "4"
+ },
+ {
+  "check": "five presses put them all out",
+  "ok": true,
+  "detail": "0"
+ },
+ {
+  "check": "then the act is done",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "keys: act:enter once, cake:wish on then off, candle:out five times, act:done once",
+  "ok": true,
+  "detail": "[\"act:enter\", \"cake:wish\", \"cake:wish\", \"candle:out\", \"candle:out\", \"candle:out\", \"candle:out\", \"candle:out\", \"act:done\"]"
+ },
+ {
+  "check": "keys: the hush is on first and off second",
+  "ok": true,
+  "detail": "[true, false]"
+ },
+ {
+  "check": "keys: the flames go out one by one (left 4,3,2,1,0)",
+  "ok": true,
+  "detail": "[4, 3, 2, 1, 0]"
+ },
+ {
+  "check": "keys: no console errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

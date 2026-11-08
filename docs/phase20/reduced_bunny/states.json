@@ -1,0 +1,72 @@
+{
+ "query": "pet=bunny&reduced&tapat=3@-0.5:-3.3",
+ "size": [
+  390,
+  780
+ ],
+ "frames": [
+  {
+   "at": 2.0,
+   "state": {
+    "place": "bunny",
+    "location": "outside",
+    "cat": {
+     "state": "sleep",
+     "purring": false,
+     "affection": 0
+    },
+    "bunny": {
+     "state": "sit",
+     "mode": "idle",
+     "x": -1.1,
+     "z": -3.4,
+     "yaw": 0.84
+    },
+    "chamgadad": "rest",
+    "t": 2
+   }
+  },
+  {
+   "at": 6.0,
+   "state": {
+    "place": "bunny",
+    "location": "outside",
+    "cat": {
+     "state": "sleep",
+     "purring": false,
+     "affection": 0
+    },
+    "bunny": {
+     "state": "hide",
+     "mode": "hiding",
+     "x": -1.1,
+     "z": -3.4,
+     "yaw": 0.84
+    },
+    "chamgadad": "curiousLean",
+    "t": 6
+   }
+  },
+  {
+   "at": 12.0,
+   "state": {
+    "place": "bunny",
+    "location": "outside",
+    "cat": {
+     "state": "sleep",
+     "purring": false,
+     "affection": 0
+    },
+    "bunny": {
+     "state": "peek",
+     "mode": "peeking",
+     "x": -1.1,
+     "z": -3.4,
+     "yaw": 0.84
+    },
+    "chamgadad": "rest",
+    "t": 12
+   }
+  }
+ ]
+}

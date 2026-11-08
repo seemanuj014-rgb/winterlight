@@ -1,0 +1,150 @@
+{
+ "query": "hold=4-8&pointer=0.5,0.2",
+ "size": [
+  390,
+  780
+ ],
+ "frames": [
+  {
+   "at": 16.0,
+   "state": {
+    "act": 1,
+    "phase": "noticing",
+    "progress": 1,
+    "lamp": 1,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookBed",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 19.0,
+   "state": {
+    "act": 1,
+    "phase": "beckoning",
+    "progress": 1,
+    "lamp": 1,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookBed",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 21.0,
+   "state": {
+    "act": 1,
+    "phase": "beckoning",
+    "progress": 1,
+    "lamp": 1,
+    "hint": 0,
+    "line": 0,
+    "deep": 0,
+    "shot": "nookBed",
+    "location": "nook"
+   }
+  },
+  {
+   "at": 23.0,
+   "state": {
+    "act": 2,
+    "phase": "walking",
+    "door": 0,
+    "shot": "nookWalk",
+    "shotElapsed": 1.97,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 25.0,
+   "state": {
+    "act": 2,
+    "phase": "walking",
+    "door": 0,
+    "shot": "nookWalk",
+    "shotElapsed": 3.97,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 27.0,
+   "state": {
+    "act": 2,
+    "phase": "walking",
+    "door": 0,
+    "shot": "nookWalk",
+    "shotElapsed": 5.97,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 29.0,
+   "state": {
+    "act": 2,
+    "phase": "walking",
+    "door": 0,
+    "shot": "nookWalk",
+    "shotElapsed": 7.97,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 31.0,
+   "state": {
+    "act": 2,
+    "phase": "opening",
+    "door": 0.48,
+    "shot": "nookAtDoor",
+    "shotElapsed": 1.87,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 33.0,
+   "state": {
+    "act": 2,
+    "phase": "opening",
+    "door": 1,
+    "shot": "nookAtDoor",
+    "shotElapsed": 3.87,
+    "location": "nook"
+   }
+  },
+  {
+   "at": 35.0,
+   "state": {
+    "act": 2,
+    "phase": "pushOut",
+    "door": 1,
+    "shot": "doorOut",
+    "shotElapsed": 1.45,
+    "location": "outside"
+   }
+  },
+  {
+   "at": 37.0,
+   "state": {
+    "act": 2,
+    "phase": "pushOut",
+    "door": 1,
+    "shot": "doorOut",
+    "shotElapsed": 3.45,
+    "location": "outside"
+   }
+  },
+  {
+   "at": 40.0,
+   "state": {
+    "act": 2,
+    "phase": "pushOut",
+    "door": 1,
+    "shot": "doorOut",
+    "shotElapsed": 6.45,
+    "location": "outside"
+   }
+  }
+ ]
+}

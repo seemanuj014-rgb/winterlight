@@ -1,0 +1,77 @@
+[
+ {
+  "check": "the cake appears and the five candles are on the screen",
+  "ok": true,
+  "detail": "[[151.68839026355136, 268.0162145412399], [173.89568664021166, 267.95577549660266], [195.34795315174253, 267.94116976089884], [216.4277519903095, 267.9718789382888], [237.5059891284351, 268.04899642612065]]"
+ },
+ {
+  "check": "it reaches the candle moment by itself",
+  "ok": true,
+  "detail": "ready"
+ },
+ {
+  "check": "the microphone was asked for once the candle moment began and, with no device, resolved quietly (no UI, no error)",
+  "ok": true,
+  "detail": "{\"phase\": \"ready\", \"lit\": 5, \"mic\": \"denied\", \"micListening\": false, \"focus\": null, \"done\": false, \"reading\": null}"
+ },
+ {
+  "check": "a tap far from the cake does nothing",
+  "ok": true,
+  "detail": "5"
+ },
+ {
+  "check": "a touch on a candle puts that candle out",
+  "ok": true,
+  "detail": "[{\"at\": 5.833333333333318, \"type\": \"ready\"}, {\"at\": 7.849999999999977, \"type\": \"candle\", \"candle\": 3, \"by\": \"tap\", \"left\": 4}]"
+ },
+ {
+  "check": "a touch on a candle already out does nothing",
+  "ok": true,
+  "detail": "4"
+ },
+ {
+  "check": "a touch on the cake itself puts out the next lit candle",
+  "ok": true,
+  "detail": "3"
+ },
+ {
+  "check": "all five out",
+  "ok": true,
+  "detail": "0"
+ },
+ {
+  "check": "then the act is done (once)",
+  "ok": true,
+  "detail": "{\"phase\": \"done\", \"lit\": 0, \"mic\": \"denied\", \"micListening\": false, \"focus\": null, \"done\": true, \"reading\": null}"
+ },
+ {
+  "check": "touch: act:enter once, cake:wish on then off, candle:out five times, act:done once",
+  "ok": true,
+  "detail": "[\"act:enter\", \"cake:wish\", \"cake:wish\", \"candle:out\", \"candle:out\", \"candle:out\", \"candle:out\", \"candle:out\", \"act:done\"]"
+ },
+ {
+  "check": "touch: the hush is on first and off second",
+  "ok": true,
+  "detail": "[true, false]"
+ },
+ {
+  "check": "touch: the flames go out one by one (left 4,3,2,1,0)",
+  "ok": true,
+  "detail": "[4, 3, 2, 1, 0]"
+ },
+ {
+  "check": "haptics were asked for (a soft buzz per candle, and the long one at the very end)",
+  "ok": true,
+  "detail": "[[18], [8], [18], [18], [18], [18], [12, 60, 12, 60, 26]]"
+ },
+ {
+  "check": "the microphone is not left open",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "touch: no console errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

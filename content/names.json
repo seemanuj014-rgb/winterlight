@@ -1,0 +1,14 @@
+{
+  "formal": "Shruti",
+  "nickname": "Dhanashree",
+  "owner_calls_her": "Dhana",
+  "she_calls_owner": "Kiwii",
+  "character": { "name": "Chamgadad", "drawn_by": "Dhana", "named_by": "owner", "note": "Name has no meaning. Not a bat. Species not stated: never infer." },
+  "constellations": [
+    { "id": "strawberry", "name": "Strawberry", "shape": "strawberry" },
+    { "id": "bumblebee", "name": "Bumblebee", "shape": "bumblebee" },
+    { "id": "rose", "name": "Rose", "shape": "frost-rose" },
+    { "id": "kaaju-katli", "name": "Kaaju Katli", "shape": "diamond" },
+    { "id": "cutie-patootie", "name": "Cutie Patootie", "shape": "cat-and-bunny" }
+  ]
+}

@@ -1,0 +1,272 @@
+[
+ {
+  "name": "360x640: three controls, each 44x44, in one column, clear of the notch",
+  "ok": true,
+  "detail": "{\"mute\": [306, 10], \"music\": [306, 62], \"wishes\": [306, 114]}"
+ },
+ {
+  "name": "360x640: every control has a plain name",
+  "ok": true,
+  "detail": "['Sound on. Tap to turn it off.', 'Play the music box tune again', 'Show the wishes again']"
+ },
+ {
+  "name": "360x640: tab order is sound, music replay, wishes replay, then the scene",
+  "ok": true,
+  "detail": "['mute-button', 'wl-replay-btn wl-replay-music', 'wl-replay-btn wl-replay-wishes', 'CANVAS']"
+ },
+ {
+  "name": "360x640: replay button shows a focus ring from the keyboard",
+  "ok": true,
+  "detail": "solid"
+ },
+ {
+  "name": "360x640: the dialog is named after its constellation",
+  "ok": true,
+  "detail": "{'label': 'Strawberry', 'role': 'dialog', 'focus': True}"
+ },
+ {
+  "name": "360x640: only one live region speaks when a card opens",
+  "ok": true,
+  "detail": "['Strawberry: TODO_OWNER']"
+ },
+ {
+  "name": "360x640: the wishes replay shows each finished wish, in the order of names.json, and only those",
+  "ok": true,
+  "detail": "['strawberry', 'rose'] vs ['strawberry', 'rose']"
+ },
+ {
+  "name": "360x640: focus goes back to the replay button after the cards",
+  "ok": true,
+  "detail": "wl-replay-btn wl-replay-wishes"
+ },
+ {
+  "name": "360x640: the music replay turns the sound on if it was off",
+  "ok": true,
+  "detail": "before true after false"
+ },
+ {
+  "name": "360x640: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "360x640: with nothing finished only the music replay shows (no empty wishes button)",
+  "ok": true,
+  "detail": "['wl-replay-btn wl-replay-music']"
+ },
+ {
+  "name": "360x640: _hint is shown, has text, and sits inside the safe area",
+  "ok": true,
+  "detail": "o=0.79 x92..268 b606"
+ },
+ {
+  "name": "360x640: _hint: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "360x640: _owners_line is shown, has text, and sits inside the safe area",
+  "ok": true,
+  "detail": "o=0.96 x20..340 b574"
+ },
+ {
+  "name": "360x640: _owners_line: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "360x640: reduced motion: buttons and names have no transition",
+  "ok": true,
+  "detail": "['0s', '0s', '0s', '0s']"
+ },
+ {
+  "name": "360x640: reduced motion: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "360x640: reduced motion: the hint and the line have no transition",
+  "ok": true,
+  "detail": "['0s', '0s']"
+ },
+ {
+  "name": "390x780: three controls, each 44x44, in one column, clear of the notch",
+  "ok": true,
+  "detail": "{\"mute\": [336, 57], \"music\": [336, 109], \"wishes\": [336, 161]}"
+ },
+ {
+  "name": "390x780: every control has a plain name",
+  "ok": true,
+  "detail": "['Sound on. Tap to turn it off.', 'Play the music box tune again', 'Show the wishes again']"
+ },
+ {
+  "name": "390x780: tab order is sound, music replay, wishes replay, then the scene",
+  "ok": true,
+  "detail": "['mute-button', 'wl-replay-btn wl-replay-music', 'wl-replay-btn wl-replay-wishes', 'CANVAS']"
+ },
+ {
+  "name": "390x780: replay button shows a focus ring from the keyboard",
+  "ok": true,
+  "detail": "solid"
+ },
+ {
+  "name": "390x780: the dialog is named after its constellation",
+  "ok": true,
+  "detail": "{'label': 'Strawberry', 'role': 'dialog', 'focus': True}"
+ },
+ {
+  "name": "390x780: only one live region speaks when a card opens",
+  "ok": true,
+  "detail": "['Strawberry: TODO_OWNER']"
+ },
+ {
+  "name": "390x780: the wishes replay shows each finished wish, in the order of names.json, and only those",
+  "ok": true,
+  "detail": "['strawberry', 'rose'] vs ['strawberry', 'rose']"
+ },
+ {
+  "name": "390x780: focus goes back to the replay button after the cards",
+  "ok": true,
+  "detail": "wl-replay-btn wl-replay-wishes"
+ },
+ {
+  "name": "390x780: the music replay turns the sound on if it was off",
+  "ok": true,
+  "detail": "before true after false"
+ },
+ {
+  "name": "390x780: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "390x780: with nothing finished only the music replay shows (no empty wishes button)",
+  "ok": true,
+  "detail": "['wl-replay-btn wl-replay-music']"
+ },
+ {
+  "name": "390x780: _hint is shown, has text, and sits inside the safe area",
+  "ok": true,
+  "detail": "o=0.79 x101..289 b712"
+ },
+ {
+  "name": "390x780: _hint: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "390x780: _owners_line is shown, has text, and sits inside the safe area",
+  "ok": true,
+  "detail": "o=0.96 x20..370 b679"
+ },
+ {
+  "name": "390x780: _owners_line: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "390x780: reduced motion: buttons and names have no transition",
+  "ok": true,
+  "detail": "['0s', '0s', '0s', '0s']"
+ },
+ {
+  "name": "390x780: reduced motion: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "390x780: reduced motion: the hint and the line have no transition",
+  "ok": true,
+  "detail": "['0s', '0s']"
+ },
+ {
+  "name": "desktop: three controls, each 44x44, in one column, clear of the notch",
+  "ok": true,
+  "detail": "{\"mute\": [1226, 10], \"music\": [1226, 62], \"wishes\": [1226, 114]}"
+ },
+ {
+  "name": "desktop: every control has a plain name",
+  "ok": true,
+  "detail": "['Sound on. Tap to turn it off.', 'Play the music box tune again', 'Show the wishes again']"
+ },
+ {
+  "name": "desktop: tab order is sound, music replay, wishes replay, then the scene",
+  "ok": true,
+  "detail": "['mute-button', 'wl-replay-btn wl-replay-music', 'wl-replay-btn wl-replay-wishes', 'CANVAS']"
+ },
+ {
+  "name": "desktop: replay button shows a focus ring from the keyboard",
+  "ok": true,
+  "detail": "solid"
+ },
+ {
+  "name": "desktop: the dialog is named after its constellation",
+  "ok": true,
+  "detail": "{'label': 'Strawberry', 'role': 'dialog', 'focus': True}"
+ },
+ {
+  "name": "desktop: only one live region speaks when a card opens",
+  "ok": true,
+  "detail": "['Strawberry: TODO_OWNER']"
+ },
+ {
+  "name": "desktop: the wishes replay shows each finished wish, in the order of names.json, and only those",
+  "ok": true,
+  "detail": "['strawberry', 'rose'] vs ['strawberry', 'rose']"
+ },
+ {
+  "name": "desktop: focus goes back to the replay button after the cards",
+  "ok": true,
+  "detail": "wl-replay-btn wl-replay-wishes"
+ },
+ {
+  "name": "desktop: the music replay turns the sound on if it was off",
+  "ok": true,
+  "detail": "before true after false"
+ },
+ {
+  "name": "desktop: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop: with nothing finished only the music replay shows (no empty wishes button)",
+  "ok": true,
+  "detail": "['wl-replay-btn wl-replay-music']"
+ },
+ {
+  "name": "desktop: _hint is shown, has text, and sits inside the safe area",
+  "ok": true,
+  "detail": "o=0.79 x538..742 b686"
+ },
+ {
+  "name": "desktop: _hint: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop: _owners_line is shown, has text, and sits inside the safe area",
+  "ok": true,
+  "detail": "o=0.96 x260..1020 b651"
+ },
+ {
+  "name": "desktop: _owners_line: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop: reduced motion: buttons and names have no transition",
+  "ok": true,
+  "detail": "['0s', '0s', '0s', '0s']"
+ },
+ {
+  "name": "desktop: reduced motion: no console errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop: reduced motion: the hint and the line have no transition",
+  "ok": true,
+  "detail": "['0s', '0s']"
+ }
+]

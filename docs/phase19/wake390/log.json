@@ -1,0 +1,26 @@
+[
+ {
+  "t": 0.017,
+  "what": "start",
+  "shot": "nookWide",
+  "act": 1
+ },
+ {
+  "t": 4.017,
+  "what": "press",
+  "progress": 0,
+  "act": 1
+ },
+ {
+  "t": 7.367,
+  "what": "wake",
+  "after": 7.37,
+  "deep": 0,
+  "act": 1
+ },
+ {
+  "t": 12.283,
+  "what": "noticing",
+  "act": 1
+ }
+]

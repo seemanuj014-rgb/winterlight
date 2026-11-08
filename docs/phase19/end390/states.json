@@ -1,0 +1,53 @@
+{
+ "query": "hold=4-8&pointer=0.1,0.2",
+ "size": [
+  390,
+  780
+ ],
+ "frames": [
+  {
+   "at": 52.0,
+   "state": {
+    "act": 2,
+    "phase": "outside",
+    "door": 1,
+    "shot": "stage",
+    "shotElapsed": 0.93,
+    "location": "outside"
+   }
+  },
+  {
+   "at": 58.0,
+   "state": {
+    "act": 2,
+    "phase": "done",
+    "door": 1,
+    "shot": "stage",
+    "shotElapsed": 6.93,
+    "location": "outside"
+   }
+  },
+  {
+   "at": 66.0,
+   "state": {
+    "act": 2,
+    "phase": "done",
+    "door": 1,
+    "shot": "stage",
+    "shotElapsed": 14.93,
+    "location": "outside"
+   }
+  },
+  {
+   "at": 75.0,
+   "state": {
+    "act": 2,
+    "phase": "done",
+    "door": 1,
+    "shot": "stage",
+    "shotElapsed": 23.93,
+    "location": "outside"
+   }
+  }
+ ]
+}

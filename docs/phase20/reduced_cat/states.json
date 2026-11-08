@@ -1,0 +1,72 @@
+{
+ "query": "pet&reduced&stroke=3-12",
+ "size": [
+  390,
+  780
+ ],
+ "frames": [
+  {
+   "at": 2.0,
+   "state": {
+    "place": "cat",
+    "location": "nook",
+    "cat": {
+     "state": "sit",
+     "purring": false,
+     "affection": 0
+    },
+    "bunny": {
+     "state": "sit",
+     "mode": "idle",
+     "x": -1.1,
+     "z": -3.4,
+     "yaw": 0.84
+    },
+    "chamgadad": "rest",
+    "t": 2
+   }
+  },
+  {
+   "at": 6.0,
+   "state": {
+    "place": "cat",
+    "location": "nook",
+    "cat": {
+     "state": "purr",
+     "purring": true,
+     "affection": 0.426
+    },
+    "bunny": {
+     "state": "sit",
+     "mode": "idle",
+     "x": -1.1,
+     "z": -3.4,
+     "yaw": 0.84
+    },
+    "chamgadad": "curiousLean",
+    "t": 6
+   }
+  },
+  {
+   "at": 12.0,
+   "state": {
+    "place": "cat",
+    "location": "nook",
+    "cat": {
+     "state": "purr",
+     "purring": true,
+     "affection": 0.999
+    },
+    "bunny": {
+     "state": "sit",
+     "mode": "idle",
+     "x": -1.1,
+     "z": -3.4,
+     "yaw": 0.84
+    },
+    "chamgadad": "rest",
+    "t": 12
+   }
+  }
+ ]
+}

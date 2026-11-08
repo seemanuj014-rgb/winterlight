@@ -1,0 +1,9 @@
+{
+  "note": "Read from window.__release on ?release&debug&tier=<tier>&at=8 (software WebGL, so frame rate means nothing). 'scene calls' is the debug overlay's number; 'draws' from the page includes the post passes.",
+  "bloom_gain_default": 0.4,
+  "low":  {"lanterns": 7,  "glitter": 120, "lantern_draw_calls": 2, "glitter_draw_calls": 1, "scene_calls": 18, "page_draws": 18, "post_passes": 0, "lantern_triangles": 84,  "console": "clean"},
+  "mid":  {"lanterns": 12, "glitter": 320, "lantern_draw_calls": 2, "glitter_draw_calls": 1, "scene_calls": 18, "page_draws": 22, "post_passes": 4, "lantern_triangles": 144, "console": "clean"},
+  "high": {"lanterns": 18, "glitter": 640, "lantern_draw_calls": 2, "glitter_draw_calls": 1, "scene_calls": 18, "page_draws": 25, "post_passes": 7, "lantern_triangles": 216, "console": "clean"},
+  "viewports_shot": ["390x780 low/mid/high", "360x640 low (burst, rise, late) and high (rise)", "960x540 high"],
+  "not_shot": "1280x720 high (the screenshot timed out twice: software GL with bloom at that size is about 1 frame a second)"
+}
