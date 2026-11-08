@@ -11,7 +11,8 @@ You've worked hard to get here, and a random stranger you found online is proud 
 May 22 bring you lots of joy and happiness, and I hope the fire ants don't bite you, because you're such a molasses. 🐜
 
 I don't say it much, but I'm really glad you're in my life. (not in a weird way) 😆
+Wish i could've done more, but through the distance this is the best i could come up with cutie 😭🙏
 
-Virtual hugs from me. 🤗
+Lots of virtual hugs from me. 🤗
 
 Happy birthday to the sweetest, prettiest, kindest and most beautiful girl in the world. 🎉
